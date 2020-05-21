@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{7BC45D56-2ED6-42FC-BCE1-CB4C1D93AAD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceVenta", "ServiceVenta\ServiceVenta.csproj", "{3DFE7ED1-3633-4298-AB97-E128D85783A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicePosOffLine", "ServicePosOffLine\ServicePosOffLine.csproj", "{B6FB5E5C-834E-4493-AD55-9822C8FB86D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DFE7ED1-3633-4298-AB97-E128D85783A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFE7ED1-3633-4298-AB97-E128D85783A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFE7ED1-3633-4298-AB97-E128D85783A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFE7ED1-3633-4298-AB97-E128D85783A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FB5E5C-834E-4493-AD55-9822C8FB86D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FB5E5C-834E-4493-AD55-9822C8FB86D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FB5E5C-834E-4493-AD55-9822C8FB86D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FB5E5C-834E-4493-AD55-9822C8FB86D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DFE7ED1-3633-4298-AB97-E128D85783A6} = {7BC45D56-2ED6-42FC-BCE1-CB4C1D93AAD4}
+		{B6FB5E5C-834E-4493-AD55-9822C8FB86D1} = {7BC45D56-2ED6-42FC-BCE1-CB4C1D93AAD4}
+	EndGlobalSection
+EndGlobal

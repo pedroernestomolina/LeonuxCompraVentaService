@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6FB5E5C-834E-4493-AD55-9822C8FB86D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServicePosOffLine</RootNamespace>
+    <AssemblyName>ServicePosOffLine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DtoLib">
+      <HintPath>..\..\CompraVenta\DtoLib\bin\Debug\DtoLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DtoLibPosOffLine">
+      <HintPath>..\..\CompraVenta\DtoLibPosOffLine\bin\Debug\DtoLibPosOffLine.dll</HintPath>
+    </Reference>
+    <Reference Include="IPosOffLine">
+      <HintPath>..\..\CompraVenta\IPosOffLine\bin\Debug\IPosOffLine.dll</HintPath>
+    </Reference>
+    <Reference Include="ProvSqLitePosOffLine">
+      <HintPath>..\..\CompraVenta\ProvSqLitePosOffLine\bin\Debug\ProvSqLitePosOffLine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\IConfiguracion.cs" />
+    <Compile Include="Interfaces\ICobrador.cs" />
+    <Compile Include="Interfaces\IMedioCobro.cs" />
+    <Compile Include="Interfaces\ITransporte.cs" />
+    <Compile Include="Interfaces\IVendedor.cs" />
+    <Compile Include="Interfaces\IDeposito.cs" />
+    <Compile Include="Interfaces\IFiscal.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IPendiente.cs" />
+    <Compile Include="Interfaces\IPermiso.cs" />
+    <Compile Include="Interfaces\IProducto.cs" />
+    <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="Interfaces\IServidor.cs" />
+    <Compile Include="Interfaces\IVentaDocumento.cs" />
+    <Compile Include="MyService\Cliente.cs" />
+    <Compile Include="MyService\Configuracion.cs" />
+    <Compile Include="MyService\Cobrador.cs" />
+    <Compile Include="MyService\MedioCobro.cs" />
+    <Compile Include="MyService\Transporte.cs" />
+    <Compile Include="MyService\Vendedor.cs" />
+    <Compile Include="MyService\Deposito.cs" />
+    <Compile Include="MyService\Fiscal.cs" />
+    <Compile Include="MyService\Item.cs" />
+    <Compile Include="MyService\Pendiente.cs" />
+    <Compile Include="MyService\Permiso.cs" />
+    <Compile Include="MyService\Producto.cs" />
+    <Compile Include="MyService\Service.cs" />
+    <Compile Include="MyService\Servidor.cs" />
+    <Compile Include="MyService\VentaDocumento.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

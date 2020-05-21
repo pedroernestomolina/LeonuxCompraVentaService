@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DFE7ED1-3633-4298-AB97-E128D85783A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceVenta</RootNamespace>
+    <AssemblyName>ServiceVenta</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DtoLib">
+      <HintPath>..\..\CompraVenta\DtoLib\bin\Debug\DtoLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DtoLibVenta">
+      <HintPath>..\..\CompraVenta\DtoLibVenta\bin\Debug\DtoLibVenta.dll</HintPath>
+    </Reference>
+    <Reference Include="ILibVentas">
+      <HintPath>..\..\CompraVenta\ProvLibVenta\bin\Debug\ILibVentas.dll</HintPath>
+    </Reference>
+    <Reference Include="ProvLibVenta">
+      <HintPath>..\..\CompraVenta\ProvLibVenta\bin\Debug\ProvLibVenta.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\ICobrador.cs" />
+    <Compile Include="Interfaces\IDeposito.cs" />
+    <Compile Include="Interfaces\IExistencia.cs" />
+    <Compile Include="Interfaces\IFiscal.cs" />
+    <Compile Include="Interfaces\IMovInvConcepto.cs" />
+    <Compile Include="Interfaces\IPermiso.cs" />
+    <Compile Include="Interfaces\IPrecio.cs" />
+    <Compile Include="Interfaces\IProducto.cs" />
+    <Compile Include="Interfaces\ISeries.cs" />
+    <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="Interfaces\IConfiguracion.cs" />
+    <Compile Include="Interfaces\ISucursal.cs" />
+    <Compile Include="Interfaces\ITransporte.cs" />
+    <Compile Include="Interfaces\IVendedor.cs" />
+    <Compile Include="Interfaces\IVenta.cs" />
+    <Compile Include="MyService\Cliente.cs" />
+    <Compile Include="MyService\Cobrador.cs" />
+    <Compile Include="MyService\Configuracion.cs" />
+    <Compile Include="MyService\Deposito.cs" />
+    <Compile Include="MyService\Existencia.cs" />
+    <Compile Include="MyService\Fiscal.cs" />
+    <Compile Include="MyService\MovInvConcepto.cs" />
+    <Compile Include="MyService\Permiso.cs" />
+    <Compile Include="MyService\Precio.cs" />
+    <Compile Include="MyService\Producto.cs" />
+    <Compile Include="MyService\Series.cs" />
+    <Compile Include="MyService\Service.cs" />
+    <Compile Include="MyService\Sucursal.cs" />
+    <Compile Include="MyService\Transporte.cs" />
+    <Compile Include="MyService\Vendedor.cs" />
+    <Compile Include="MyService\Venta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
