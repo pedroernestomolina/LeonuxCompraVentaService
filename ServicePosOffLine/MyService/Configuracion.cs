@@ -72,6 +72,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Configuracion_ClavePos();
         }
 
+        public DtoLib.Resultado Configuracion_Actualizar(DtoLibPosOffLine.Configuracion.Guardar.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_Actualizar(ficha);
+        }
+
     }
 
 }

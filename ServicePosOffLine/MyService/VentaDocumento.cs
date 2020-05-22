@@ -47,6 +47,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.VentaDocumento_Agregar(ficha);
         }
 
+        public DtoLib.ResultadoLista<DtoLibPosOffLine.VentaDocumento.Lista.Resumen> VentaDocumento_Lista(DtoLibPosOffLine.VentaDocumento.Lista.Filtro filtro)
+        {
+            return ServiceProv.VentaDocumento_Lista(filtro);
+        }
+
     }
 
 }
