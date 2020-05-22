@@ -55,6 +55,7 @@
     <Compile Include="Interfaces\IConfiguracion.cs" />
     <Compile Include="Interfaces\ICobrador.cs" />
     <Compile Include="Interfaces\IMedioCobro.cs" />
+    <Compile Include="Interfaces\ISerie.cs" />
     <Compile Include="Interfaces\ITransporte.cs" />
     <Compile Include="Interfaces\IVendedor.cs" />
     <Compile Include="Interfaces\IDeposito.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="MyService\Configuracion.cs" />
     <Compile Include="MyService\Cobrador.cs" />
     <Compile Include="MyService\MedioCobro.cs" />
+    <Compile Include="MyService\Serie.cs" />
     <Compile Include="MyService\Transporte.cs" />
     <Compile Include="MyService\Vendedor.cs" />
     <Compile Include="MyService\Deposito.cs" />
