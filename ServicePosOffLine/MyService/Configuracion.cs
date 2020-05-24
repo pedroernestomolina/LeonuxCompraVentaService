@@ -77,6 +77,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Configuracion_Actualizar(ficha);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Configuracion.Actual.Ficha> Configuracion_ActualCargar()
+        {
+            return ServiceProv.Configuracion_ActualCargar() ;
+        }
+
     }
 
 }
