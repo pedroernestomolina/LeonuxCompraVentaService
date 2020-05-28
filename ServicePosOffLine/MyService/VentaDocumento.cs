@@ -52,6 +52,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.VentaDocumento_Lista(filtro);
         }
 
+        public DtoLib.Resultado VentaDocumento_Anular(int idDocumento)
+        {
+            return ServiceProv.VentaDocumento_Anular(idDocumento);
+        }
+
     }
 
 }

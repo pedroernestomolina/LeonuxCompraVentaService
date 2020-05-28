@@ -16,7 +16,11 @@ namespace ServicePosOffLine.MyService
         {
             return ServiceProv.Permiso_ManejoPos();
         }
-
+     
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Permiso.AdmDocumento.Ficha> Permiso_AdmDocumento()
+        {
+            return ServiceProv.Permiso_AdmDocumento();
+        }
     }
 
 }
