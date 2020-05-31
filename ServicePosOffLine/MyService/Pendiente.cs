@@ -22,14 +22,14 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Pendiente_Lista();
         }
 
-        public DtoLib.Resultado Pendiente_AbrirCtaEnPendiente(int id)
-        {
-            return ServiceProv.Pendiente_AbrirCtaEnPendiente(id);
-        }
-
         public DtoLib.Resultado Pendiente_EliminarCtaEnPendiente(int id)
         {
             return ServiceProv.Pendiente_EliminarCtaEnPendiente(id);
+        }
+
+        DtoLib.ResultadoEntidad<DtoLibPosOffLine.Pendiente.CtaAbrir.Ficha> IPendiente.Pendiente_AbrirCtaEnPendiente(int id)
+        {
+            return ServiceProv.Pendiente_AbrirCtaEnPendiente(id);
         }
 
     }
