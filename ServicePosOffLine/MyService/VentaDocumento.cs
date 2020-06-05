@@ -57,6 +57,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.VentaDocumento_Anular(idDocumento);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.VentaDocumento.Cargar.Ficha> VentaDocumento_Cargar(int idDocumento)
+        {
+            return ServiceProv.VentaDocumento_Cargar(idDocumento);
+        }
+
     }
 
 }
