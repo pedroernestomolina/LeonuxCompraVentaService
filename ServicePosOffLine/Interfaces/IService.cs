@@ -9,7 +9,7 @@ namespace ServicePosOffLine.Interfaces
 {
     
     public interface IService: IProducto, ICliente, IServidor, IItem, IVentaDocumento, IFiscal, IConfiguracion,
-        IPendiente, IPermiso, IDeposito, ICobrador,IVendedor,ITransporte,IMedioCobro, ISerie
+        IPendiente, IPermiso, IDeposito, ICobrador,IVendedor,ITransporte,IMedioCobro, ISerie, IJornada
     {
 
         void setServidorRemoto(string instancia, string baseDatos);
