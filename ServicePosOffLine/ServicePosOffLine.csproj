@@ -56,6 +56,7 @@
     <Compile Include="Interfaces\ICobrador.cs" />
     <Compile Include="Interfaces\IJornada.cs" />
     <Compile Include="Interfaces\IMedioCobro.cs" />
+    <Compile Include="Interfaces\IOperador.cs" />
     <Compile Include="Interfaces\ISerie.cs" />
     <Compile Include="Interfaces\ITransporte.cs" />
     <Compile Include="Interfaces\IVendedor.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="MyService\Cobrador.cs" />
     <Compile Include="MyService\Jornada.cs" />
     <Compile Include="MyService\MedioCobro.cs" />
+    <Compile Include="MyService\Operador.cs" />
     <Compile Include="MyService\Serie.cs" />
     <Compile Include="MyService\Transporte.cs" />
     <Compile Include="MyService\Vendedor.cs" />
