@@ -13,6 +13,8 @@ namespace ServicePosOffLine.Interfaces
 
         DtoLib.Resultado Servidor_Test();
         DtoLib.Resultado Servidor_ActualizarData();
+        DtoLib.Resultado Servidor_EnviarData(DtoLibPosOffLine.Servidor.EnviarData.Ficha ficha);
+        DtoLib.ResultadoEntidad<DtoLibPosOffLine.Servidor.RecogerDataEnviar.Ficha> Servidor_RecogerDataEnviar();
 
     }
 

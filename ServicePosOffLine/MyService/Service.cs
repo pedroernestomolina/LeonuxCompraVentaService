@@ -30,6 +30,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.FechaServidor();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Sistema.InformacionBD.Ficha> InformacionBD()
+        {
+            return ServiceProv.InformacionBD();
+        }
+
     }
 
 }

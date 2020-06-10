@@ -22,6 +22,16 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Servidor_ActualizarData();
         }
 
+        public DtoLib.Resultado Servidor_EnviarData(DtoLibPosOffLine.Servidor.EnviarData.Ficha ficha)
+        {
+            return ServiceProv.Servidor_EnviarData(ficha);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Servidor.RecogerDataEnviar.Ficha> Servidor_RecogerDataEnviar()
+        {
+            return ServiceProv.Servidor_RecogerDataEnviar();
+        }
+
     }
 
 }
