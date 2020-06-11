@@ -15,6 +15,7 @@ namespace ServicePosOffLine.Interfaces
         DtoLib.ResultadoLista<DtoLibPosOffLine.Pendiente.Listar.Resumen> Pendiente_Lista();
         DtoLib.ResultadoEntidad<DtoLibPosOffLine.Pendiente.CtaAbrir.Ficha> Pendiente_AbrirCtaEnPendiente(int id);
         DtoLib.Resultado Pendiente_EliminarCtaEnPendiente(int id);
+        DtoLib.ResultadoEntidad<bool> Pendiente_HayCuentasPorProcesar();
 
     }
 

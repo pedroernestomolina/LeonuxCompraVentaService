@@ -82,6 +82,16 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Configuracion_ActualCargar() ;
         }
 
+        public DtoLib.ResultadoEntidad<string> Configuracion_TarifaPrecio()
+        {
+            return ServiceProv.Configuracion_TarifaPrecio();
+        }
+
+        public DtoLib.ResultadoEntidad<bool> Configuracion_EtiquetarPrecioPorTipoNegocio()
+        {
+            return ServiceProv.Configuracion_EtiquetarPrecioPorTipoNegocio();
+        }
+
     }
 
 }

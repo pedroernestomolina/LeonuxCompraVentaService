@@ -32,6 +32,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Pendiente_AbrirCtaEnPendiente(id);
         }
 
+        public DtoLib.ResultadoEntidad<bool> Pendiente_HayCuentasPorProcesar()
+        {
+            return ServiceProv.Pendiente_HayCuentasPorProcesar();
+        }
+
     }
 
 }
