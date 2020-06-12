@@ -35,6 +35,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.InformacionBD();
         }
 
+        public DtoLib.Resultado Inicializar_BdLocal()
+        {
+            return ServiceProv.Inicializar_BdLocal();
+        }
+
     }
 
 }

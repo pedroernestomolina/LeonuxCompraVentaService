@@ -21,6 +21,17 @@ namespace ServicePosOffLine.MyService
         {
             return ServiceProv.Permiso_AdmDocumento();
         }
+
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Permiso.Actual.Ficha> Permiso_ActualCargar()
+        {
+            return ServiceProv.Permiso_ActualCargar();
+        }
+
+        public DtoLib.Resultado Permiso_Actualizar(DtoLibPosOffLine.Permiso.Actualizar.Ficha ficha)
+        {
+            return ServiceProv.Permiso_Actualizar(ficha);
+        }
+
     }
 
 }
