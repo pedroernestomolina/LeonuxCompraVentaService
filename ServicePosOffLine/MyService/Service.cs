@@ -40,6 +40,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Inicializar_BdLocal();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Empresa.Ficha> Empresa_Datos()
+        {
+            return ServiceProv.Empresa_Datos ();
+        }
+
     }
 
 }
