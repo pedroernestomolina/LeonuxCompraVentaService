@@ -92,6 +92,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Configuracion_EtiquetarPrecioPorTipoNegocio();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Configuracion.MovConceptoInv.Ficha> Configuracion_MovConceptoInv()
+        {
+            return ServiceProv.Configuracion_MovConceptoInv();
+        }
+
     }
 
 }
