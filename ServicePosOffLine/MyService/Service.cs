@@ -45,6 +45,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Empresa_Datos ();
         }
 
+        public DtoLib.ResultadoEntidad<DateTime?> FechaUltimaActualizaion()
+        {
+            return ServiceProv.FechaUltimaActualizaion();
+        }
+
     }
 
 }

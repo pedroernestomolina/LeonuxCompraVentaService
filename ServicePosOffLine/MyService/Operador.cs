@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 namespace ServicePosOffLine.MyService
 {
 
-        public partial class Service: IService
+    public partial class Service: IService
     {
+
         public DtoLib.ResultadoId Operador_Abrir(DtoLibPosOffLine.Operador.Abrir.Ficha ficha)
         {
             var result = new DtoLib.ResultadoId();
@@ -44,5 +45,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Operador_Activa();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Operador.Movimiento.Ficha> Operador_Movimientos(int idOperador)
+        {
+            return ServiceProv.Operador_Movimientos(idOperador);
+        }
+
     }
+
 }
