@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0A6222C-61FE-4AEA-A05E-2B1192ED13ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceCajaBanco</RootNamespace>
+    <AssemblyName>ServiceCajaBanco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DtoLib">
+      <HintPath>..\..\CompraVenta\ProvLibCajaBanco\bin\Debug\DtoLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DtoLibCajaBanco">
+      <HintPath>..\..\CompraVenta\ProvLibCajaBanco\bin\Debug\DtoLibCajaBanco.dll</HintPath>
+    </Reference>
+    <Reference Include="ILibCajaBanco">
+      <HintPath>..\..\CompraVenta\ProvLibCajaBanco\bin\Debug\ILibCajaBanco.dll</HintPath>
+    </Reference>
+    <Reference Include="ProvLibCajaBanco">
+      <HintPath>..\..\CompraVenta\ProvLibCajaBanco\bin\Debug\ProvLibCajaBanco.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IReporteMovimiento.cs" />
+    <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="Interfaces\ISucursal.cs" />
+    <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="MyService\ReporteMovimiento.cs" />
+    <Compile Include="MyService\Service.cs" />
+    <Compile Include="MyService\Sucursal.cs" />
+    <Compile Include="MyService\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
