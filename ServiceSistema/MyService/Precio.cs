@@ -17,6 +17,16 @@ namespace ServiceSistema.MyService
             return ServiceProv.Precio_GetLista();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Precio.Etiquetar.Ficha> Precio_Etiquetar_GetFicha()
+        {
+            return ServiceProv.Precio_Etiquetar_GetFicha();
+        }
+
+        public DtoLib.Resultado Precio_Etiquetar_Actualizar(DtoLibSistema.Precio.Etiquetar.Actualizar ficha)
+        {
+            return ServiceProv.Precio_Etiquetar_Actualizar(ficha);
+        }
+
     }
 
 }
