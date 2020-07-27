@@ -37,6 +37,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.Sucursal_AsignarDepositoPrincipal(ficha);
         }
 
+        public DtoLib.Resultado Sucursal_QuitarDepositoPrincipal(string autoSuc)
+        {
+            return ServiceProv.Sucursal_QuitarDepositoPrincipal(autoSuc);
+        }
+
     }
 
 }

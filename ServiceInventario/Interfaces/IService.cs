@@ -9,7 +9,7 @@ namespace ServiceInventario.Interfaces
 {
     
     public interface IService: IDeposito, IConcepto, ISucursal, IMovimiento, IUsuario, 
-        IReporteMovimientos, IReporteDocumentos, ITool
+        IReporteMovimientos, IReporteDocumentos, ITool, IDepartamento
     {
 
         DtoLib.ResultadoEntidad<DateTime> FechaServidor();

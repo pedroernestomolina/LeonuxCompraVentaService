@@ -16,6 +16,7 @@ namespace ServiceSistema.Interfaces
         DtoLib.ResultadoAuto Sucursal_Agregar(DtoLibSistema.Sucursal.Agregar ficha);
         DtoLib.Resultado Sucursal_Editar(DtoLibSistema.Sucursal.Editar ficha);
         DtoLib.Resultado Sucursal_AsignarDepositoPrincipal(DtoLibSistema.Sucursal.AsignarDepositoPrincipal ficha);
+        DtoLib.Resultado Sucursal_QuitarDepositoPrincipal(string autoSuc);
 
     }
 
