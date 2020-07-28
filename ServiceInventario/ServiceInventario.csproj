@@ -54,6 +54,9 @@
     <Compile Include="Interfaces\IConcepto.cs" />
     <Compile Include="Interfaces\IDepartamento.cs" />
     <Compile Include="Interfaces\IDeposito.cs" />
+    <Compile Include="Interfaces\IEmpaqueMedida.cs" />
+    <Compile Include="Interfaces\IGrupo.cs" />
+    <Compile Include="Interfaces\IMarca.cs" />
     <Compile Include="Interfaces\IMovimiento.cs" />
     <Compile Include="Interfaces\IReporteDocumentos.cs" />
     <Compile Include="Interfaces\IReporteMovimientos.cs" />
@@ -64,6 +67,9 @@
     <Compile Include="MyService\Concepto.cs" />
     <Compile Include="MyService\Departamento.cs" />
     <Compile Include="MyService\Deposito.cs" />
+    <Compile Include="MyService\EmpaqueMedida.cs" />
+    <Compile Include="MyService\Grupo.cs" />
+    <Compile Include="MyService\Marca.cs" />
     <Compile Include="MyService\Movimiento.cs" />
     <Compile Include="MyService\ReporteMoviminetos.cs" />
     <Compile Include="MyService\Service.cs" />
