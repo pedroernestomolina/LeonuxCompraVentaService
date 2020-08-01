@@ -52,17 +52,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IDeposito.cs" />
+    <Compile Include="Interfaces\IFuncion.cs" />
+    <Compile Include="Interfaces\IUsuarioGrupo.cs" />
     <Compile Include="Interfaces\IPrecio.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
     <Compile Include="Interfaces\ISucursalGrupo.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="MyService\Deposito.cs" />
+    <Compile Include="MyService\Funcion.cs" />
     <Compile Include="MyService\Precio.cs" />
     <Compile Include="MyService\Service.cs" />
     <Compile Include="MyService\Sucursal.cs" />
     <Compile Include="MyService\SucursalGrupo.cs" />
     <Compile Include="MyService\Usuario.cs" />
+    <Compile Include="MyService\UsuarioGrupo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

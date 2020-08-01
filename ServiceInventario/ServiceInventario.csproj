@@ -58,10 +58,12 @@
     <Compile Include="Interfaces\IGrupo.cs" />
     <Compile Include="Interfaces\IMarca.cs" />
     <Compile Include="Interfaces\IMovimiento.cs" />
+    <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\IReporteDocumentos.cs" />
     <Compile Include="Interfaces\IReporteMovimientos.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
+    <Compile Include="Interfaces\ITasaImpuesto.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="MyService\Concepto.cs" />
@@ -71,9 +73,11 @@
     <Compile Include="MyService\Grupo.cs" />
     <Compile Include="MyService\Marca.cs" />
     <Compile Include="MyService\Movimiento.cs" />
+    <Compile Include="MyService\Producto.cs" />
     <Compile Include="MyService\ReporteMoviminetos.cs" />
     <Compile Include="MyService\Service.cs" />
     <Compile Include="MyService\Sucursal.cs" />
+    <Compile Include="MyService\TasaImpuesto.cs" />
     <Compile Include="MyService\Tool.cs" />
     <Compile Include="MyService\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
