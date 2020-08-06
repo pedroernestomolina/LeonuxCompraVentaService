@@ -52,6 +52,16 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_Oferta_Lista();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Existencia> Producto_GetExistencia(string autoPrd)
+        {
+            return ServiceProv.Producto_GetExistencia(autoPrd);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Precio> Producto_GetPrecio(string autoPrd)
+        {
+            return ServiceProv.Producto_GetPrecio(autoPrd);
+        }
+
     }
 
 }

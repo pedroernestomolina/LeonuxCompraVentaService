@@ -27,6 +27,16 @@ namespace ServiceInventario.MyService
             return ServiceProv.Concepto_PorTraslado();
         }
 
+        public DtoLib.ResultadoAuto Concepto_Agregar(DtoLibInventario.Concepto.Agregar ficha)
+        {
+            return ServiceProv.Concepto_Agregar(ficha);
+        }
+
+        public DtoLib.Resultado Concepto_Editar(DtoLibInventario.Concepto.Editar ficha)
+        {
+            return ServiceProv.Concepto_Editar(ficha);
+        }
+
     }
 
 }
