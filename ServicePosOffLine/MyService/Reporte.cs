@@ -22,7 +22,7 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Reporte_NCredito(filtro);
         }
 
-        public DtoLib.ResultadoLista<DtoLibPosOffLine.Reporte.Pago.Resumen.Ficha> Reporte_Pago_Resumen(DtoLibPosOffLine.Reporte.Pago.Filtro filtro)
+        public DtoLib.ResultadoEntidad<DtoLibPosOffLine.Reporte.Pago.Resumen.Ficha> Reporte_Pago_Resumen(DtoLibPosOffLine.Reporte.Pago.Filtro filtro)
         {
             return ServiceProv.Reporte_Pago_Resumen(filtro);
         }
