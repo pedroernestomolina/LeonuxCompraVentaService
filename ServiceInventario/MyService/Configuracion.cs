@@ -17,6 +17,16 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_PreferenciaBusqueda();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.Enumerados.EnumMetodoCalculoUtilidad> Configuracion_MetodoCalculoUtilidad()
+        {
+            return ServiceProv.Configuracion_MetodoCalculoUtilidad();
+        }
+
+        public DtoLib.ResultadoEntidad<decimal> Configuracion_TasaCambioActual()
+        {
+            return ServiceProv.Configuracion_TasaCambioActual();
+        }
+
     }
 
 }

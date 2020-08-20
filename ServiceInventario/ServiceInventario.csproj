@@ -59,6 +59,7 @@
     <Compile Include="Interfaces\IGrupo.cs" />
     <Compile Include="Interfaces\IMarca.cs" />
     <Compile Include="Interfaces\IMovimiento.cs" />
+    <Compile Include="Interfaces\IPrecio.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\IReporteDocumentos.cs" />
     <Compile Include="Interfaces\IReporteMovimientos.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="MyService\Grupo.cs" />
     <Compile Include="MyService\Marca.cs" />
     <Compile Include="MyService\Movimiento.cs" />
+    <Compile Include="MyService\Precio.cs" />
     <Compile Include="MyService\Producto.cs" />
     <Compile Include="MyService\ReporteMoviminetos.cs" />
     <Compile Include="MyService\Service.cs" />

@@ -12,6 +12,8 @@ namespace ServiceInventario.Interfaces
     {
 
         DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.Enumerados.EnumPreferenciaBusqueda> Configuracion_PreferenciaBusqueda();
+        DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.Enumerados.EnumMetodoCalculoUtilidad> Configuracion_MetodoCalculoUtilidad();
+        DtoLib.ResultadoEntidad<decimal> Configuracion_TasaCambioActual();
 
     }
 
