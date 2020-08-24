@@ -62,6 +62,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_GetPrecio(autoPrd);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Costo> Producto_GetCosto(string autoPrd)
+        {
+            return ServiceProv.Producto_GetCosto(autoPrd);
+        }
+
     }
 
 }

@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\IConcepto.cs" />
     <Compile Include="Interfaces\IConfiguracion.cs" />
+    <Compile Include="Interfaces\ICosto.cs" />
     <Compile Include="Interfaces\IDepartamento.cs" />
     <Compile Include="Interfaces\IDeposito.cs" />
     <Compile Include="Interfaces\IEmpaqueMedida.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="MyService\Concepto.cs" />
     <Compile Include="MyService\Configuracion.cs" />
+    <Compile Include="MyService\Costo.cs" />
     <Compile Include="MyService\Departamento.cs" />
     <Compile Include="MyService\Deposito.cs" />
     <Compile Include="MyService\EmpaqueMedida.cs" />
