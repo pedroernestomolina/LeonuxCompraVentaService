@@ -42,6 +42,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.Sucursal_QuitarDepositoPrincipal(autoSuc);
         }
 
+        public DtoLib.ResultadoEntidad<int> Sucursal_GeneraCodigoAutomatico()
+        {
+            return ServiceProv.Sucursal_GeneraCodigoAutomatico();
+        }
+
     }
 
 }

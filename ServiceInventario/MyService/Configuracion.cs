@@ -27,6 +27,16 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_TasaCambioActual();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.Enumerados.EnumForzarRedondeoPrecioVenta> Configuracion_ForzarRedondeoPrecioVenta()
+        {
+            return ServiceProv.Configuracion_ForzarRedondeoPrecioVenta();
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.Enumerados.EnumPreferenciaRegistroPrecio> Configuracion_PreferenciaRegistroPrecio()
+        {
+            return ServiceProv.Configuracion_PreferenciaRegistroPrecio();
+        }
+
     }
 
 }

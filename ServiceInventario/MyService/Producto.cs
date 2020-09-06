@@ -22,7 +22,7 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_GetFicha(autoPrd);
         }
 
-        public DtoLib.ResultadoLista<DtoLibInventario.Producto.Estatus.Resumen> Producto_Estatus_Lista()
+        public DtoLib.ResultadoLista<DtoLibInventario.Producto.Estatus.Lista.Resumen> Producto_Estatus_Lista()
         {
             return ServiceProv.Producto_Estatus_Lista();
         }
@@ -67,7 +67,7 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_GetCosto(autoPrd);
         }
 
-        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Depositos.Ficha> Producto_GetDepositos(string autoPrd)
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Depositos.Lista.Ficha> Producto_GetDepositos(string autoPrd)
         {
             return ServiceProv.Producto_GetDepositos(autoPrd);
         }
@@ -164,6 +164,53 @@ namespace ServiceInventario.MyService
             }
 
             return ServiceProv.Producto_Nuevo_Agregar (ficha);
+        }
+
+        public DtoLib.Resultado Producto_CambiarEstatusA_Activo(string auto)
+        {
+            return ServiceProv.Producto_CambiarEstatusA_Activo(auto);
+        }
+
+        public DtoLib.Resultado Producto_CambiarEstatusA_Inactivo(string auto)
+        {
+            var rt = ServiceProv.Producto_Verificar_ExistenciaEnCero(auto);
+            if (rt.Result == DtoLib.Enumerados.EnumResult.isError) 
+            {
+                return new DtoLib.Resultado() { Mensaje = rt.Mensaje, Result = DtoLib.Enumerados.EnumResult.isError, };
+            }
+            return ServiceProv.Producto_CambiarEstatusA_Inactivo(auto);
+        }
+
+        public DtoLib.Resultado Producto_CambiarEstatusA_Suspendido(string auto)
+        {
+            return ServiceProv.Producto_CambiarEstatusA_Suspendido (auto);
+        }
+
+
+
+        DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Depositos.Lista.Ficha> IProducto.Producto_GetDepositos(string autoPrd)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Depositos.Ver.Ficha> Producto_GetDeposito(DtoLibInventario.Producto.Depositos.Ver.Filtro filtro)
+        {
+            return ServiceProv.Producto_GetDeposito(filtro);
+        }
+
+        public DtoLib.Resultado Producto_DepositoEditar(DtoLibInventario.Producto.Depositos.Editar.Ficha ficha)
+        {
+            var rt = new DtoLib.Resultado();
+
+            rt = ServiceProv.Producto_Verificar_QueExista_EstatusActivo_NoSeaBienServicio(ficha.autoProducto);
+            if (rt.Result == DtoLib.Enumerados.EnumResult.isError) { return rt; }
+
+            return ServiceProv.Producto_EditarDeposito(ficha);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Estatus.Actual.Ficha> Producto_Estatus_GetFicha(string autoPrd)
+        {
+            return ServiceProv.Producto_Estatus_GetFicha(autoPrd);
         }
 
     }

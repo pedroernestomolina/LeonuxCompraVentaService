@@ -32,6 +32,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.Deposito_Editar(ficha);
         }
 
+        public DtoLib.ResultadoEntidad<int> Deposito_GeneraCodigoAutomatico()
+        {
+            return ServiceProv.Deposito_GeneraCodigoAutomatico();
+        }
+
     }
 
 }
