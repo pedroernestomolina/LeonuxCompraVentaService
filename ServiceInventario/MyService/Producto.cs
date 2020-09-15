@@ -115,10 +115,23 @@ namespace ServiceInventario.MyService
                 rs.Result = DtoLib.Enumerados.EnumResult.isError;
                 return rs;
             }
-
             if (r1.Entidad == true)
             {
-                rs.Mensaje = "CODIGO DEL PRODUCTO YA REGISTRADO, VERIFIQUE POR FAVOR";
+                rs.Mensaje = "[ CODIGO ] YA REGISTRADO, VERIFIQUE POR FAVOR";
+                rs.Result = DtoLib.Enumerados.EnumResult.isError;
+                return rs;
+            }
+
+            var r2 = ServiceProv.Producto_Verificar_CodigoPluProductoYaRegistrado(ficha.plu, ficha.auto);
+            if (r2.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                rs.Mensaje = r2.Mensaje;
+                rs.Result = DtoLib.Enumerados.EnumResult.isError;
+                return rs;
+            }
+            if (r2.Entidad == true)
+            {
+                rs.Mensaje = "[ PLU ] YA REGISTRADO, VERIFIQUE POR FAVOR";
                 rs.Result = DtoLib.Enumerados.EnumResult.isError;
                 return rs;
             }
@@ -155,10 +168,23 @@ namespace ServiceInventario.MyService
                 rt.Result = DtoLib.Enumerados.EnumResult.isError;
                 return rt;
             }
-
             if (r1.Entidad == true) 
             {
-                rt.Mensaje = "CODIGO DEL PRODUCTO YA REGISTRADO, VERIFIQUE POR FAVOR";
+                rt.Mensaje = "[ CODIGO ] YA REGISTRADO, VERIFIQUE POR FAVOR";
+                rt.Result = DtoLib.Enumerados.EnumResult.isError;
+                return rt;
+            }
+
+            var r2 = ServiceProv.Producto_Verificar_CodigoPluProductoYaRegistrado(ficha.plu,"");
+            if (r2.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                rt.Mensaje = r2.Mensaje;
+                rt.Result = DtoLib.Enumerados.EnumResult.isError;
+                return rt;
+            }
+            if (r2.Entidad == true)
+            {
+                rt.Mensaje = "[ PLU ] YA REGISTRADO, VERIFIQUE POR FAVOR";
                 rt.Result = DtoLib.Enumerados.EnumResult.isError;
                 return rt;
             }
@@ -187,12 +213,6 @@ namespace ServiceInventario.MyService
         }
 
 
-
-        DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Depositos.Lista.Ficha> IProducto.Producto_GetDepositos(string autoPrd)
-        {
-            throw new NotImplementedException();
-        }
-
         public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Depositos.Ver.Ficha> Producto_GetDeposito(DtoLibInventario.Producto.Depositos.Ver.Filtro filtro)
         {
             return ServiceProv.Producto_GetDeposito(filtro);
@@ -211,6 +231,16 @@ namespace ServiceInventario.MyService
         public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Estatus.Actual.Ficha> Producto_Estatus_GetFicha(string autoPrd)
         {
             return ServiceProv.Producto_Estatus_GetFicha(autoPrd);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Imagen> Producto_GetImagen(string autoPrd)
+        {
+            return ServiceProv.Producto_GetImagen(autoPrd);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibInventario.Producto.Plu.Lista.Resumen> Producto_Plu_Lista()
+        {
+            return ServiceProv.Producto_Plu_Lista ();
         }
 
     }
