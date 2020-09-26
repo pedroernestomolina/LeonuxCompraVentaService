@@ -243,6 +243,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_Plu_Lista ();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Identificacion> Producto_GetIdentificacion(string autoPrd)
+        {
+            return ServiceProv.Producto_GetIdentificacion (autoPrd);
+        }
+
     }
 
 }

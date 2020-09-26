@@ -71,6 +71,7 @@
     <Compile Include="Interfaces\ITasaImpuesto.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="Interfaces\IVisor.cs" />
     <Compile Include="MyService\Concepto.cs" />
     <Compile Include="MyService\Configuracion.cs" />
     <Compile Include="MyService\Costo.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="MyService\TasaImpuesto.cs" />
     <Compile Include="MyService\Tool.cs" />
     <Compile Include="MyService\Usuario.cs" />
+    <Compile Include="MyService\Visor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
