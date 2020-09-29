@@ -18,6 +18,7 @@ namespace ServiceInventario.Interfaces
         DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Costo> Producto_GetCosto(string autoPrd);
         DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Imagen> Producto_GetImagen(string autoPrd);
         DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Identificacion> Producto_GetIdentificacion(string autoPrd);
+        DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Proveedor.Ficha> Producto_GetProveedores (string autoPrd);
 
         DtoLib.ResultadoEntidad<DtoLibInventario.Producto.Depositos.Lista.Ficha> Producto_GetDepositos(string autoPrd);
         DtoLib.Resultado Producto_AsignarDepositos(DtoLibInventario.Producto.Depositos.Asignar.Ficha ficha);

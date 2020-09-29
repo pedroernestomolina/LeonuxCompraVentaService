@@ -102,6 +102,32 @@ namespace ServiceInventario.MyService
                 };
                 return rte;
             }
+
+            var listaCostoEdad = new List<DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle>();
+            foreach (var rg in ficha.prdDeposito.Where(w => w.cantidadUnd < 0).ToList())
+            {
+                listaCostoEdad .Add(new DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle()
+                {
+                    autoProducto = rg.autoProducto,
+                });
+            }
+            var fichaCostoEdad = new DtoLibInventario.Movimiento.Verificar.CostoEdad.Ficha()
+            {
+                detalles = listaCostoEdad,
+                dias = 30,
+            };
+            var rt2 = ServiceProv.Producto_Movimiento_Verificar_CostoEdad(fichaCostoEdad);
+            if (rt2.Result == DtoLib.Enumerados.EnumResult.isError || rt2.Entidad == false)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = rt2.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
             return ServiceProv.Producto_Movimiento_Ajuste_Insertar(ficha);
         }
 

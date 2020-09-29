@@ -248,6 +248,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_GetIdentificacion (autoPrd);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Producto.VerData.Proveedor.Ficha> Producto_GetProveedores(string autoPrd)
+        {
+            return ServiceProv.Producto_GetProveedores(autoPrd);
+        }
+
     }
 
 }
