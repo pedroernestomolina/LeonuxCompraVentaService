@@ -37,6 +37,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_PreferenciaRegistroPrecio();
         }
 
+        public DtoLib.ResultadoEntidad<int> Configuracion_CostoEdadProducto()
+        {
+            return ServiceProv.Configuracion_CostoEdadProducto();
+        }
+
     }
 
 }

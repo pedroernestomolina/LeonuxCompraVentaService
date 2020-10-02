@@ -32,6 +32,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Visor_Ajuste(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Visor.CostoExistencia.Ficha> Visor_CostoExistencia(DtoLibInventario.Visor.CostoExistencia.Filtro filtro)
+        {
+            return ServiceProv.Visor_CostoExistencia(filtro);
+        }
+
     }
 
 }

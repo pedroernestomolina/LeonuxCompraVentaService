@@ -16,6 +16,7 @@ namespace ServiceInventario.Interfaces
         DtoLib.ResultadoEntidad<decimal> Configuracion_TasaCambioActual();
         DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.Enumerados.EnumForzarRedondeoPrecioVenta> Configuracion_ForzarRedondeoPrecioVenta();
         DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.Enumerados.EnumPreferenciaRegistroPrecio> Configuracion_PreferenciaRegistroPrecio();
+        DtoLib.ResultadoEntidad<int> Configuracion_CostoEdadProducto();
 
     }
 

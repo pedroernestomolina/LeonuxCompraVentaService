@@ -81,6 +81,18 @@ namespace ServiceInventario.MyService
 
         public DtoLib.ResultadoAuto Producto_Movimiento_Ajuste_Insertar(DtoLibInventario.Movimiento.Ajuste.Insertar.Ficha ficha)
         {
+            var rt1 = ServiceProv.Configuracion_CostoEdadProducto();
+            if (rt1.Result == DtoLib.Enumerados.EnumResult.isError) 
+            {
+                var rtx = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rt1.Mensaje,
+                    Result = rt1.Result,
+                };
+                return rtx;
+            }
+            var costoEdad = rt1.Entidad;
+
             var lista = new List<DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha>();
             foreach (var rg in ficha.prdDeposito.Where(w=>w.cantidadUnd<0).ToList())
             {
@@ -103,32 +115,40 @@ namespace ServiceInventario.MyService
                 return rte;
             }
 
-            var listaCostoEdad = new List<DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle>();
-            foreach (var rg in ficha.prdDeposito.Where(w => w.cantidadUnd < 0).ToList())
+            if (costoEdad > 0)
             {
-                listaCostoEdad .Add(new DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle()
+                var listaCostoEdad = new List<DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle>();
+                foreach (var rg in ficha.prdDeposito.Where(w => w.cantidadUnd < 0).ToList())
                 {
-                    autoProducto = rg.autoProducto,
-                });
-            }
-            var fichaCostoEdad = new DtoLibInventario.Movimiento.Verificar.CostoEdad.Ficha()
-            {
-                detalles = listaCostoEdad,
-                dias = 30,
-            };
-            var rt2 = ServiceProv.Producto_Movimiento_Verificar_CostoEdad(fichaCostoEdad);
-            if (rt2.Result == DtoLib.Enumerados.EnumResult.isError || rt2.Entidad == false)
-            {
-                var rte = new DtoLib.ResultadoAuto()
+                    listaCostoEdad.Add(new DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle()
+                    {
+                        autoProducto = rg.autoProducto,
+                    });
+                }
+                var fichaCostoEdad = new DtoLibInventario.Movimiento.Verificar.CostoEdad.Ficha()
                 {
-                    Auto = "",
-                    Mensaje = rt2.Mensaje,
-                    Result = DtoLib.Enumerados.EnumResult.isError,
+                    detalles = listaCostoEdad,
+                    dias = costoEdad,
                 };
-                return rte;
+                var rt2 = ServiceProv.Producto_Movimiento_Verificar_CostoEdad(fichaCostoEdad);
+                if (rt2.Result == DtoLib.Enumerados.EnumResult.isError || rt2.Entidad == false)
+                {
+                    var rte = new DtoLib.ResultadoAuto()
+                    {
+                        Auto = "",
+                        Mensaje = rt2.Mensaje,
+                        Result = DtoLib.Enumerados.EnumResult.isError,
+                    };
+                    return rte;
+                }
             }
 
             return ServiceProv.Producto_Movimiento_Ajuste_Insertar(ficha);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibInventario.Movimiento.Lista.Resumen> Producto_Movimiento_GetLista(DtoLibInventario.Movimiento.Lista.Filtro filtro)
+        {
+            return ServiceProv.Producto_Movimiento_GetLista(filtro);
         }
 
     }
