@@ -151,6 +151,70 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_Movimiento_GetLista(filtro);
         }
 
+        public DtoLib.Resultado Producto_Movimiento_Cargo_Anular(DtoLibInventario.Movimiento.Anular.Cargo.Ficha ficha)
+        {
+            var rt1 = ServiceProv.Producto_Movimiento_Verificar_AnularDocumento(ficha.autoDocumento);
+            if (rt1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rt = new DtoLib.Resultado()
+                {
+                    Mensaje = rt1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rt;
+            }
+
+            return ServiceProv.Producto_Movimiento_Cargo_Anular(ficha);
+        }
+
+        public DtoLib.Resultado Producto_Movimiento_Descargo_Anular(DtoLibInventario.Movimiento.Anular.Descargo.Ficha ficha)
+        {
+            var rt1 = ServiceProv.Producto_Movimiento_Verificar_AnularDocumento(ficha.autoDocumento);
+            if (rt1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rt = new DtoLib.Resultado()
+                {
+                    Mensaje = rt1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rt;
+            }
+
+            return ServiceProv.Producto_Movimiento_Descargo_Anular(ficha);
+        }
+
+        public DtoLib.Resultado Producto_Movimiento_Traslado_Anular(DtoLibInventario.Movimiento.Anular.Traslado.Ficha ficha)
+        {
+            var rt1 = ServiceProv.Producto_Movimiento_Verificar_AnularDocumento (ficha.autoDocumento);
+            if (rt1.Result == DtoLib.Enumerados.EnumResult.isError) 
+            {
+                var rt = new DtoLib.Resultado()
+                {
+                    Mensaje = rt1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rt;
+            }
+
+            return ServiceProv.Producto_Movimiento_Traslado_Anular(ficha);
+        }
+
+        public DtoLib.Resultado Producto_Movimiento_Ajuste_Anular(DtoLibInventario.Movimiento.Anular.Ajuste.Ficha ficha)
+        {
+            var rt1 = ServiceProv.Producto_Movimiento_Verificar_AnularDocumento(ficha.autoDocumento);
+            if (rt1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rt = new DtoLib.Resultado()
+                {
+                    Mensaje = rt1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rt;
+            }
+
+            return ServiceProv.Producto_Movimiento_Ajuste_Anular(ficha);
+        }
+
     }
 
 }

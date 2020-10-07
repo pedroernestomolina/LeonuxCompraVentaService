@@ -65,7 +65,7 @@
     <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
     <Compile Include="Interfaces\IReporteDocumentos.cs" />
-    <Compile Include="Interfaces\IReporteMovimientos.cs" />
+    <Compile Include="Interfaces\IReportes.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
     <Compile Include="Interfaces\ITasaImpuesto.cs" />
@@ -85,7 +85,7 @@
     <Compile Include="MyService\Precio.cs" />
     <Compile Include="MyService\Producto.cs" />
     <Compile Include="MyService\Proveedor.cs" />
-    <Compile Include="MyService\ReporteMoviminetos.cs" />
+    <Compile Include="MyService\Reportes.cs" />
     <Compile Include="MyService\Service.cs" />
     <Compile Include="MyService\Sucursal.cs" />
     <Compile Include="MyService\TasaImpuesto.cs" />
