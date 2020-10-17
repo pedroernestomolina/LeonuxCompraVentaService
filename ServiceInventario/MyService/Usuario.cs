@@ -17,6 +17,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Usuario_Principal();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Usuario.Ficha> Usuario_Buscar(DtoLibInventario.Usuario.Buscar.Ficha ficha)
+        {
+            return ServiceProv.Usuario_Buscar(ficha);
+        }
+
     }
 
 }

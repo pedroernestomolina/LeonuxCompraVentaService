@@ -12,6 +12,7 @@ namespace ServiceInventario.Interfaces
     {
 
         DtoLib.ResultadoEntidad<DtoLibInventario.Usuario.Ficha> Usuario_Principal();
+        DtoLib.ResultadoEntidad<DtoLibInventario.Usuario.Ficha> Usuario_Buscar(DtoLibInventario.Usuario.Buscar.Ficha ficha);
 
     }
 

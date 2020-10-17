@@ -61,6 +61,7 @@
     <Compile Include="Interfaces\IKardex.cs" />
     <Compile Include="Interfaces\IMarca.cs" />
     <Compile Include="Interfaces\IMovimiento.cs" />
+    <Compile Include="Interfaces\IPermisos.cs" />
     <Compile Include="Interfaces\IPrecio.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="MyService\Kardex.cs" />
     <Compile Include="MyService\Marca.cs" />
     <Compile Include="MyService\Movimiento.cs" />
+    <Compile Include="MyService\Permisos.cs" />
     <Compile Include="MyService\Precio.cs" />
     <Compile Include="MyService\Producto.cs" />
     <Compile Include="MyService\Proveedor.cs" />
