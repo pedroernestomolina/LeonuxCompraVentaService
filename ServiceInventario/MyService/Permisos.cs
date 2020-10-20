@@ -149,6 +149,21 @@ namespace ServiceInventario.MyService
             return ServiceProv.Permiso_MovimientoTrasladoEntreSucursales_PorExistenciaDebajoDelMinimo(autoGrupoUsuario);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Reportes(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Reportes(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Visor(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Visor(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Estadistica(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Estadistica(autoGrupoUsuario);
+        }
+
     }
 
 }

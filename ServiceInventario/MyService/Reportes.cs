@@ -27,6 +27,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Reportes_Top20(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Reportes.MaestroExistencia.Ficha> Reportes_MaestroExistencia(DtoLibInventario.Reportes.MaestroExistencia.Filtro filtro)
+        {
+            return ServiceProv.Reportes_MaestroExistencia(filtro);
+        }
+
     }
 
 }
