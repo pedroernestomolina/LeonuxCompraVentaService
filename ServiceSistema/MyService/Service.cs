@@ -26,6 +26,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.FechaServidor();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Empresa.Data.Ficha> Empresa_Datos()
+        {
+            return ServiceProv.Empresa_Datos();
+        }
+
     }
 
 }

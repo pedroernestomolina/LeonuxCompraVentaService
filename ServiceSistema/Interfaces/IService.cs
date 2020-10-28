@@ -9,10 +9,11 @@ namespace ServiceSistema.Interfaces
 {
 
     public interface IService: ISucursal, IDeposito, ISucursalGrupo, IUsuario, IPrecio, IUsuarioGrupo,
-        IFuncion, IServConf
+        IFuncion, IServConf, IPermisos, IConfiguracion
     {
 
         DtoLib.ResultadoEntidad<DateTime> FechaServidor();
+        DtoLib.ResultadoEntidad<DtoLibSistema.Empresa.Data.Ficha> Empresa_Datos();
 
     }
 

@@ -47,6 +47,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.Usuario_Inactivar(ficha);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Usuario.Cargar.Ficha> Usuario_Buscar(DtoLibSistema.Usuario.Buscar.Ficha ficha)
+        {
+            return ServiceProv.Usuario_Buscar(ficha);
+        }
+
     }
 
 }

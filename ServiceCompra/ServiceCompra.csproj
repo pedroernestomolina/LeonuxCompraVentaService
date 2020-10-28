@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A1A6E89-06AD-4BC2-8ADB-4474C83FE659}</ProjectGuid>
+    <ProjectGuid>{36DF3DED-4CAC-43C7-8990-EA8242E9448E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceSistema</RootNamespace>
-    <AssemblyName>ServiceSistema</AssemblyName>
+    <RootNamespace>ServiceCompra</RootNamespace>
+    <AssemblyName>ServiceCompra</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,16 +31,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DtoLib">
-      <HintPath>..\..\CompraVenta\ProvLibSistema\bin\Debug\DtoLib.dll</HintPath>
+      <HintPath>..\..\CompraVenta\DtoLib\bin\Debug\DtoLib.dll</HintPath>
     </Reference>
-    <Reference Include="DtoLibSistema">
-      <HintPath>..\..\CompraVenta\ProvLibSistema\bin\Debug\DtoLibSistema.dll</HintPath>
+    <Reference Include="DtoLibCompra">
+      <HintPath>..\..\CompraVenta\DtoLibCompra\bin\Debug\DtoLibCompra.dll</HintPath>
     </Reference>
-    <Reference Include="ILibSistema">
-      <HintPath>..\..\CompraVenta\ProvLibSistema\bin\Debug\ILibSistema.dll</HintPath>
+    <Reference Include="ILibCompras">
+      <HintPath>..\..\CompraVenta\ILibCompras\bin\Debug\ILibCompras.dll</HintPath>
     </Reference>
-    <Reference Include="ProvLibSistema">
-      <HintPath>..\..\CompraVenta\ProvLibSistema\bin\Debug\ProvLibSistema.dll</HintPath>
+    <Reference Include="ProvLibCompra">
+      <HintPath>..\..\CompraVenta\ProvLibCompra\bin\Debug\ProvLibCompra.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,28 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IConfiguracion.cs" />
-    <Compile Include="Interfaces\IPermisos.cs" />
-    <Compile Include="Interfaces\IServConf.cs" />
     <Compile Include="Interfaces\IDeposito.cs" />
-    <Compile Include="Interfaces\IFuncion.cs" />
-    <Compile Include="Interfaces\IUsuarioGrupo.cs" />
-    <Compile Include="Interfaces\IPrecio.cs" />
+    <Compile Include="Interfaces\IProveedor.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
-    <Compile Include="Interfaces\ISucursalGrupo.cs" />
-    <Compile Include="Interfaces\IUsuario.cs" />
-    <Compile Include="MyService\Configuracion.cs" />
     <Compile Include="MyService\Deposito.cs" />
-    <Compile Include="MyService\Funcion.cs" />
-    <Compile Include="MyService\Permisos.cs" />
-    <Compile Include="MyService\Precio.cs" />
-    <Compile Include="MyService\ServConf.cs" />
+    <Compile Include="MyService\Proveedor.cs" />
     <Compile Include="MyService\Service.cs" />
     <Compile Include="MyService\Sucursal.cs" />
-    <Compile Include="MyService\SucursalGrupo.cs" />
-    <Compile Include="MyService\Usuario.cs" />
-    <Compile Include="MyService\UsuarioGrupo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

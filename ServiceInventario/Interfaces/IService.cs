@@ -15,6 +15,7 @@ namespace ServiceInventario.Interfaces
     {
 
         DtoLib.ResultadoEntidad<DateTime> FechaServidor();
+        DtoLib.ResultadoEntidad<DtoLibInventario.Empresa.Data.Ficha> Empresa_Datos();
         //DtoLib.ResultadoEntidad<DtoLibPosOffLine.Sistema.InformacionBD.Ficha> InformacionBD();
 
     }

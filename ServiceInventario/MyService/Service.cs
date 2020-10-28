@@ -32,6 +32,11 @@ namespace ServiceInventario.MyService
         //    //return ServiceProv.InformacionBD();
         //}
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Empresa.Data.Ficha> Empresa_Datos()
+        {
+            return ServiceProv.Empresa_Datos();
+        }
+
     }
 
 }
