@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 namespace ServiceCompra.Interfaces
 {
     
-    public interface IService: IDeposito, ISucursal, IProveedor, IProducto, IUsuario, IEmpresa, IPermiso
+    public interface IProducto
     {
+
+        DtoLib.ResultadoLista<DtoLibCompra.Producto.Lista.Resumen> Producto_GetLista(DtoLibCompra.Producto.Lista.Filtro filtro);
+
     }
 
 }

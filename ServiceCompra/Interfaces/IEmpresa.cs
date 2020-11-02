@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 namespace ServiceCompra.Interfaces
 {
     
-    public interface IService: IDeposito, ISucursal, IProveedor, IProducto, IUsuario, IEmpresa, IPermiso
+    public interface IEmpresa
     {
+
+        DtoLib.ResultadoEntidad<DtoLibCompra.Empresa.Data.Ficha> Empresa_Datos();
+
     }
 
 }

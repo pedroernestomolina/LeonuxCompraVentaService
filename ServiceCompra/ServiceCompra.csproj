@@ -52,13 +52,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IDeposito.cs" />
+    <Compile Include="Interfaces\IEmpresa.cs" />
+    <Compile Include="Interfaces\IPermiso.cs" />
+    <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
+    <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="MyService\Deposito.cs" />
+    <Compile Include="MyService\Empresa.cs" />
+    <Compile Include="MyService\Permiso.cs" />
+    <Compile Include="MyService\Producto.cs" />
     <Compile Include="MyService\Proveedor.cs" />
     <Compile Include="MyService\Service.cs" />
     <Compile Include="MyService\Sucursal.cs" />
+    <Compile Include="MyService\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
