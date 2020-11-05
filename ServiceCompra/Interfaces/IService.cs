@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 namespace ServiceCompra.Interfaces
 {
     
-    public interface IService: IDeposito, ISucursal, IProveedor, IProducto, IUsuario, IEmpresa, IPermiso
+    public interface IService: IDeposito, ISucursal, IProveedor, IProducto, IUsuario, IEmpresa,
+        IPermiso, IConfiguracion
     {
+
+        DtoLib.ResultadoEntidad<DateTime> FechaServidor();
+
     }
 
 }

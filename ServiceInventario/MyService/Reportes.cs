@@ -32,6 +32,16 @@ namespace ServiceInventario.MyService
             return ServiceProv.Reportes_MaestroExistencia(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Reportes.MaestroPrecio.Ficha> Reportes_MaestroPrecio(DtoLibInventario.Reportes.MaestroPrecio.Filtro filtro)
+        {
+            return ServiceProv.Reportes_MaestroPrecio(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibInventario.Reportes.Kardex.Ficha> Reportes_Kardex(DtoLibInventario.Reportes.Kardex.Filtro filtro)
+        {
+            return ServiceProv.Reportes_Kardex(filtro);
+        }
+
     }
 
 }

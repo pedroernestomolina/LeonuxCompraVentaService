@@ -20,6 +20,12 @@ namespace ServiceCompra.MyService
             ServiceProv = new ProvLibCompra.Provider(instancia, bd);
         }
 
+
+        public DtoLib.ResultadoEntidad<DateTime> FechaServidor()
+        {
+            return ServiceProv.FechaServidor();
+        }
+
     }
 
 }

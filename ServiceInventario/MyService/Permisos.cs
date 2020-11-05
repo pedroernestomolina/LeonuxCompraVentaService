@@ -130,13 +130,22 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_MovimientoAjusteInventario(autoGrupoUsuario);
         }
+
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_AdministradorMovimientoInventario(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_AdministradorMovimientoInventario(autoGrupoUsuario);
         }
-        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_AnularMovimientoInventario(string autoGrupoUsuario)
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_AdmAnularMovimientoInventario(string autoGrupoUsuario)
         {
-            return ServiceProv.Permiso_AnularMovimientoInventario(autoGrupoUsuario);
+            return ServiceProv.Permiso_AdmAnularMovimientoInventario(autoGrupoUsuario);
+        }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_AdmVisualizarMovimientoInventario(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_AdmVisualizarMovimientoInventario(autoGrupoUsuario);
+        }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_AdmReporteMovimientoInventario(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_AdmReporteMovimientoInventario(autoGrupoUsuario);
         }
 
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_DefinirNivelMinimoMaximoInventario(string autoGrupoUsuario)
