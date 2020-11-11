@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ServiceCajaBanco.Interfaces
 {
- 
-    public interface IService: ISucursal, IUsuario, IReporteMovimiento, IDeposito, IEmpresaGrupo
+    
+    public interface IEmpresaGrupo
     {
 
-        DtoLib.ResultadoEntidad<DateTime> FechaServidor();
+        DtoLib.ResultadoEntidad<DtoLibCajaBanco.EmpresaGrupo.Ficha> EmpresaGrupo_GetFicha(string autoGrupo);
 
     }
 

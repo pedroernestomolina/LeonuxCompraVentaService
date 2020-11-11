@@ -17,9 +17,9 @@ namespace ServiceCompra.MyService
             return ServiceProv.Proveedor_GetLista(filtro);
         }
 
-        public DtoLib.ResultadoLista<DtoLibCompra.Proveedor.Data.Ficha> Proveedor_GetFicha(string autoPrv)
+        DtoLib.ResultadoEntidad<DtoLibCompra.Proveedor.Data.Ficha> IProveedor.Proveedor_GetFicha(string autoPrv)
         {
-            return ServiceProv.Proveedor_GetFicha (autoPrv);
+            return ServiceProv.Proveedor_GetFicha(autoPrv);
         }
 
     }

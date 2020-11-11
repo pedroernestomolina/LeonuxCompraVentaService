@@ -12,7 +12,7 @@ namespace ServiceCompra.Interfaces
     {
 
         DtoLib.ResultadoLista<DtoLibCompra.Proveedor.Lista.Resumen> Proveedor_GetLista(DtoLibCompra.Proveedor.Lista.Filtro filtro);
-        DtoLib.ResultadoLista<DtoLibCompra.Proveedor.Data.Ficha> Proveedor_GetFicha(string autoPrv);
+        DtoLib.ResultadoEntidad<DtoLibCompra.Proveedor.Data.Ficha> Proveedor_GetFicha(string autoPrv);
 
     }
 

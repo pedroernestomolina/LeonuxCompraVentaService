@@ -17,6 +17,21 @@ namespace ServiceCajaBanco.MyService
             return ServiceProv.CajaBanco_ArqueoCajaPos(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Movimiento.Inventario.Ficha> Reporte_InventarioResumen(DtoLibCajaBanco.Reporte.Movimiento.Inventario.Filtro filtro)
+        {
+            return ServiceProv.Reporte_InventarioResumen(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Movimiento.ResumenVenta.Ficha> Reporte_VentaResumen(DtoLibCajaBanco.Reporte.Movimiento.ResumenVenta.Filtro filtro)
+        {
+            return ServiceProv.Reporte_VentaResumen(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Habladores.Ficha> Reporte_Habladores(DtoLibCajaBanco.Reporte.Habladores.Filtro filtro)
+        {
+            return ServiceProv.Reporte_Habladores(filtro);
+        }
+
     }
 
 }
