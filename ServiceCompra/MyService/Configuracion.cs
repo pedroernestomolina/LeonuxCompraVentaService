@@ -22,6 +22,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Configuracion_TasaCambioActual();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Configuracion.Enumerados.EnumPreferenciaBusquedaProducto> Configuracion_PreferenciaBusquedaProducto()
+        {
+            return ServiceProv.Configuracion_PreferenciaBusquedaProducto();
+        }
+
     }
 
 }

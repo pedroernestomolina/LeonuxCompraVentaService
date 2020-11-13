@@ -12,6 +12,7 @@ namespace ServiceCompra.Interfaces
     {
 
         DtoLib.ResultadoEntidad< DtoLibCompra.Configuracion.Enumerados.EnumPreferenciaBusquedaProveedor> Configuracion_PreferenciaBusquedaProveedor();
+        DtoLib.ResultadoEntidad<DtoLibCompra.Configuracion.Enumerados.EnumPreferenciaBusquedaProducto> Configuracion_PreferenciaBusquedaProducto();
         DtoLib.ResultadoEntidad<decimal> Configuracion_TasaCambioActual();
 
     }
