@@ -22,6 +22,11 @@ namespace ServiceCajaBanco.MyService
             return ServiceProv.Sucursal_GetPrincipal();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCajaBanco.Sucursal.Ficha> Sucursal_GetFicha(string auto)
+        {
+            return ServiceProv.Sucursal_GetFicha(auto);
+        }
+
     }
 
 }

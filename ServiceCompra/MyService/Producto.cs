@@ -17,6 +17,16 @@ namespace ServiceCompra.MyService
             return ServiceProv.Producto_GetLista (filtro);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Producto.Data.Ficha> Producto_GetFicha(string autoPrd)
+        {
+            return ServiceProv.Producto_GetFicha(autoPrd);
+        }
+
+        public DtoLib.ResultadoEntidad<string> Producto_GetCodigoRefProveedor(DtoLibCompra.Producto.CodigoRefProveedor.Filtro filtro)
+        {
+            return ServiceProv.Producto_GetCodigoRefProveedor(filtro);
+        }
+
     }
 
 }

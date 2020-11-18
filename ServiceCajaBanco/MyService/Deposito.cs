@@ -22,6 +22,11 @@ namespace ServiceCajaBanco.MyService
             return ServiceProv.Deposito_GetPrincipal();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCajaBanco.Deposito.Ficha> Deposito_GetFicha(string auto)
+        {
+            return ServiceProv.Deposito_GetFicha(auto);
+        }
+
     }
 
 }

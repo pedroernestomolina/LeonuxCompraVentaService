@@ -13,6 +13,7 @@ namespace ServiceCajaBanco.Interfaces
 
         DtoLib.ResultadoLista<DtoLibCajaBanco.Sucursal.Resumen> Sucursal_GetLista();
         DtoLib.ResultadoEntidad<DtoLibCajaBanco.Sucursal.Ficha> Sucursal_GetPrincipal();
+        DtoLib.ResultadoEntidad<DtoLibCajaBanco.Sucursal.Ficha> Sucursal_GetFicha(string auto);
 
     }
 
