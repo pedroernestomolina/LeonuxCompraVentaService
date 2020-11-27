@@ -12,6 +12,7 @@ namespace ServiceCompra.Interfaces
     {
 
         DtoLib.ResultadoEntidad<DtoLibCompra.Empresa.Data.Ficha> Empresa_Datos();
+        DtoLib.ResultadoEntidad<DtoLibCompra.Empresa.Fiscal.Ficha> Empresa_GetTasas();
 
     }
 

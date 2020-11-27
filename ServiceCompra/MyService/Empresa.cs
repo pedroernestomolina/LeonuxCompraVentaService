@@ -17,6 +17,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Empresa_Datos();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Empresa.Fiscal.Ficha> Empresa_GetTasas()
+        {
+            return ServiceProv.Empresa_GetTasas();
+        }
+
     }
 
 }
