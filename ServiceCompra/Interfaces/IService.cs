@@ -9,7 +9,7 @@ namespace ServiceCompra.Interfaces
 {
     
     public interface IService: IDeposito, ISucursal, IProveedor, IProducto, IUsuario, IEmpresa,
-        IPermiso, IConfiguracion, IDocumento
+        IPermiso, IConfiguracion, IDocumento, IConcepto
     {
 
         DtoLib.ResultadoEntidad<DateTime> FechaServidor();

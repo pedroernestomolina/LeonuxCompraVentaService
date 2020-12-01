@@ -27,6 +27,16 @@ namespace ServiceCompra.MyService
             return ServiceProv.Configuracion_PreferenciaBusquedaProducto();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Configuracion.Enumerados.EnumMetodoCalculoUtilidad> Configuracion_MetodoCalculoUtilidad()
+        {
+            return ServiceProv.Configuracion_MetodoCalculoUtilidad();
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Configuracion.Enumerados.EnumForzarRedondeoPrecioVenta> Configuracion_ForzarRedondeoPrecioVenta()
+        {
+            return ServiceProv.Configuracion_ForzarRedondeoPrecioVenta();
+        }
+
     }
 
 }

@@ -27,6 +27,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Producto_GetCodigoRefProveedor(filtro);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Producto.Utilidad.Ficha> Producto_GetUtilidadPrecio(string auto)
+        {
+            return ServiceProv.Producto_GetUtilidadPrecio(auto);
+        }
+
     }
 
 }

@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IConcepto.cs" />
     <Compile Include="Interfaces\IConfiguracion.cs" />
     <Compile Include="Interfaces\IDeposito.cs" />
     <Compile Include="Interfaces\IDocumento.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
+    <Compile Include="MyService\Concepto.cs" />
     <Compile Include="MyService\Configuracion.cs" />
     <Compile Include="MyService\Deposito.cs" />
     <Compile Include="MyService\Documento.cs" />
