@@ -37,6 +37,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Configuracion_ForzarRedondeoPrecioVenta();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Configuracion.Enumerados.EnumPreferenciaRegistroPrecio> Configuracion_PreferenciaRegistroPrecio()
+        {
+            return ServiceProv.Configuracion_PreferenciaRegistroPrecio();
+        }
+
     }
 
 }

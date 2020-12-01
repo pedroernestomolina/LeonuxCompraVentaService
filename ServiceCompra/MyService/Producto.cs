@@ -32,6 +32,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Producto_GetUtilidadPrecio(auto);
         }
 
+        public DtoLib.Resultado Producto_VerificaDepositoAsignado(DtoLibCompra.Producto.VerificarDepositoAsignado.Ficha ficha)
+        {
+            return ServiceProv.Producto_VerificaDepositoAsignado(ficha);
+        }
+
     }
 
 }
