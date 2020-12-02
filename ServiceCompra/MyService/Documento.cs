@@ -17,6 +17,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Compra_DocumentoAgregarFactura(docFac);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Documento.Visualizar.Ficha> Compra_DocumentoVisualizar(string auto)
+        {
+            return ServiceProv.Compra_DocumentoVisualizar(auto);
+        }
+
     }
 
 }
