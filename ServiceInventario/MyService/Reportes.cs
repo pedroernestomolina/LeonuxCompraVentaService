@@ -42,6 +42,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Reportes_Kardex(filtro);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Reportes.CompraVentaAlmacen.Ficha> Reportes_CompraVentaAlmacen(DtoLibInventario.Reportes.CompraVentaAlmacen.Filtro filtro)
+        {
+            return ServiceProv.Reportes_CompraVentaAlmacen(filtro);
+        }
+
     }
 
 }
