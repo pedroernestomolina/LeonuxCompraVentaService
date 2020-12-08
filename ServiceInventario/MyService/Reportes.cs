@@ -47,6 +47,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Reportes_CompraVentaAlmacen(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Reportes.DepositoResumen.Ficha> Reportes_DepositoResumen()
+        {
+            return ServiceProv.Reportes_DepositoResumen();
+        }
+
     }
 
 }

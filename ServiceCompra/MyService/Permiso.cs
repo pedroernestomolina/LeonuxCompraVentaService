@@ -32,6 +32,33 @@ namespace ServiceCompra.MyService
             return ServiceProv.Permiso_ToolCompra(autoGrupoUsuario);
         }
 
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Registrar_Factura(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Registrar_Factura(autoGrupoUsuario);
+        }
+
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_AdmDoc(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_AdmDoc(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_AdmDoc_Anular(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_AdmDoc_Anular(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_AdmDoc_Visualizar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_AdmDoc_Visualizar(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_AdmDoc_Reporte(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_AdmDoc_Reporte(autoGrupoUsuario);
+        }
+
     }
 
 }

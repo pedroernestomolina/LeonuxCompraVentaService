@@ -42,6 +42,16 @@ namespace ServiceCajaBanco.MyService
             return ServiceProv.Reporte_VentaPorProducto(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Movimiento.ResumenVentaSucursal.Ficha> Reporte_ResumenVentaSucursal(DtoLibCajaBanco.Reporte.Movimiento.ResumenVentaSucursal.Filtro filtro)
+        {
+            return ServiceProv.Reporte_ResumenVentaSucursal(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Movimiento.VentasPorProductoSucursal.Ficha> Reporte_VentaPorProductoSucursal(DtoLibCajaBanco.Reporte.Movimiento.VentasPorProductoSucursal.Filtro filtro)
+        {
+            return ServiceProv.Reporte_VentaPorProductoSucursal(filtro);
+        }
+
     }
 
 }
