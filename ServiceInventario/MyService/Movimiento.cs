@@ -130,16 +130,20 @@ namespace ServiceInventario.MyService
                     detalles = listaCostoEdad,
                     dias = costoEdad,
                 };
-                var rt2 = ServiceProv.Producto_Movimiento_Verificar_CostoEdad(fichaCostoEdad);
-                if (rt2.Result == DtoLib.Enumerados.EnumResult.isError || rt2.Entidad == false)
+
+                if (listaCostoEdad.Count > 0) 
                 {
-                    var rte = new DtoLib.ResultadoAuto()
+                    var rt2 = ServiceProv.Producto_Movimiento_Verificar_CostoEdad(fichaCostoEdad);
+                    if (rt2.Result == DtoLib.Enumerados.EnumResult.isError || rt2.Entidad == false)
                     {
-                        Auto = "",
-                        Mensaje = rt2.Mensaje,
-                        Result = DtoLib.Enumerados.EnumResult.isError,
-                    };
-                    return rte;
+                        var rte = new DtoLib.ResultadoAuto()
+                        {
+                            Auto = "",
+                            Mensaje = rt2.Mensaje,
+                            Result = DtoLib.Enumerados.EnumResult.isError,
+                        };
+                        return rte;
+                    }
                 }
             }
 
