@@ -27,6 +27,14 @@ namespace ServiceCompra.MyService
             return ServiceProv.Compra_DocumentoGetLista(filtro);
         }
 
+        public DtoLib.Resultado Compra_DocumentoAnularFactura(DtoLibCompra.Documento.Anular.Factura.Ficha ficha)
+        {
+            var r01 = ServiceProv.Compra_DocumentoAnular_Verificar(ficha.autoDocumento);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+                return r01;
+            return ServiceProv.Compra_DocumentoAnularFactura(ficha);
+        }
+
     }
 
 }
