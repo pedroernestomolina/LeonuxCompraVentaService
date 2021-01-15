@@ -38,6 +38,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Permiso_Registrar_Factura(autoGrupoUsuario);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Registrar_Nc(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Registrar_Nc(autoGrupoUsuario);
+        }
+
 
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_AdmDoc(string autoGrupoUsuario)
         {

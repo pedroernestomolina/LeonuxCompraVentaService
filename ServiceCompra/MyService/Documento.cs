@@ -12,11 +12,6 @@ namespace ServiceCompra.MyService
     public partial class Service: IService
     {
 
-        public DtoLib.ResultadoAuto Compra_DocumentoAgregarFactura(DtoLibCompra.Documento.Cargar.Factura.Ficha docFac)
-        {
-            return ServiceProv.Compra_DocumentoAgregarFactura(docFac);
-        }
-
         public DtoLib.ResultadoEntidad<DtoLibCompra.Documento.Visualizar.Ficha> Compra_DocumentoVisualizar(string auto)
         {
             return ServiceProv.Compra_DocumentoVisualizar(auto);
@@ -33,6 +28,16 @@ namespace ServiceCompra.MyService
             if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
                 return r01;
             return ServiceProv.Compra_DocumentoAnularFactura(ficha);
+        }
+
+        public DtoLib.ResultadoAuto Compra_DocumentoAgregarFactura(DtoLibCompra.Documento.Agregar.Factura.Ficha docFac)
+        {
+            return ServiceProv.Compra_DocumentoAgregarFactura(docFac);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibCompra.Documento.ListaRemision.Ficha> Compra_DocumentoGetListaRemision(DtoLibCompra.Documento.ListaRemision.Filtro filtro)
+        {
+            return ServiceProv.Compra_DocumentoGetListaRemision(filtro);
         }
 
     }

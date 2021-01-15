@@ -21,6 +21,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Usuario_Buscar(ficha);
         }
 
+        public DtoLib.Resultado Usuario_ActualizarSesion(DtoLibCompra.Usuario.ActualizarSesion.Ficha ficha)
+        {
+            return ServiceProv.Usuario_ActualizarSesion(ficha);
+        }
+
     }
 
 }

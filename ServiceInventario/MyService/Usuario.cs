@@ -22,6 +22,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Usuario_Buscar(ficha);
         }
 
+        public DtoLib.Resultado Usuario_ActualizarSesion(DtoLibInventario.Usuario.ActualizarSesion.Ficha ficha)
+        {
+            return ServiceProv.Usuario_ActualizarSesion(ficha);
+        }
+
     }
 
 }

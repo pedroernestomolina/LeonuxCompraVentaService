@@ -52,6 +52,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.Usuario_Buscar(ficha);
         }
 
+        public DtoLib.Resultado Usuario_ActualizarSesion(DtoLibSistema.Usuario.ActualizarSesion.Ficha ficha)
+        {
+            return ServiceProv.Usuario_ActualizarSesion(ficha);
+        }
+
     }
 
 }

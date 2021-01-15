@@ -72,7 +72,7 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_GetDepositos(autoPrd);
         }
 
-        public DtoLib.Resultado Producto_AsignarDepositos(DtoLibInventario.Producto.Depositos.Asignar.Ficha ficha)
+        public DtoLib.Resultado Producto_AsignarRemoverDepositos(DtoLibInventario.Producto.Depositos.Asignar.Ficha ficha)
         {
             var rs = new DtoLib.Resultado();
 
@@ -91,7 +91,21 @@ namespace ServiceInventario.MyService
                 return rs;
             }
 
-            return ServiceProv.Producto_AsignarDepositos(ficha);
+            if (ficha.depRemover != null)
+            {
+                foreach (var it in ficha.depRemover)
+                {
+                    var rt1 = ServiceProv.Producto_Verificar_DepositoRemover(ficha.autoProducto, it.autoDeposito);
+                    if (rt1.Result == DtoLib.Enumerados.EnumResult.isError)
+                    {
+                        rs.Mensaje = rt1.Mensaje;
+                        rs.Result = DtoLib.Enumerados.EnumResult.isError;
+                        return rs;
+                    }
+                }
+            }
+
+            return ServiceProv.Producto_AsignarRemoverDepositos (ficha);
         }
 
         public DtoLib.ResultadoLista<DtoLibInventario.Producto.Clasificacion.Resumen> Producto_Clasificacion_Lista()

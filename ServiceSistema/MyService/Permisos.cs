@@ -133,6 +133,26 @@ namespace ServiceSistema.MyService
             return ServiceProv.Permiso_ControlUsuarioGrupo_Editar(autoGrupoUsuario);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuario(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ControlUsuario(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuario_Agregar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ControlUsuario_Agregar(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuario_Editar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ControlUsuario_Editar(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuario_ActivarInactivar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ControlUsuario_ActivarInactivar(autoGrupoUsuario);
+        }
+
     }
 
 }
