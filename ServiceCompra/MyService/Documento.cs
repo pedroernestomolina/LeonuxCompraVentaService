@@ -40,6 +40,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Compra_DocumentoGetListaRemision(filtro);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Documento.Cargar.Ficha> Compra_DocumentoGetFicha(string auto)
+        {
+            return ServiceProv.Compra_DocumentoGetFicha(auto);
+        }
+
     }
 
 }
