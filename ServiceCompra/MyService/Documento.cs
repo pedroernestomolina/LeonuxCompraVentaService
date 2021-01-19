@@ -35,6 +35,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Compra_DocumentoAgregarFactura(docFac);
         }
 
+        public DtoLib.ResultadoAuto Compra_DocumentoAgregarNC(DtoLibCompra.Documento.Agregar.NotaCredito.Ficha docNC)
+        {
+            return ServiceProv.Compra_DocumentoAgregarNotaCredito(docNC);
+        }
+
         public DtoLib.ResultadoLista<DtoLibCompra.Documento.ListaRemision.Ficha> Compra_DocumentoGetListaRemision(DtoLibCompra.Documento.ListaRemision.Filtro filtro)
         {
             return ServiceProv.Compra_DocumentoGetListaRemision(filtro);
@@ -43,6 +48,14 @@ namespace ServiceCompra.MyService
         public DtoLib.ResultadoEntidad<DtoLibCompra.Documento.Cargar.Ficha> Compra_DocumentoGetFicha(string auto)
         {
             return ServiceProv.Compra_DocumentoGetFicha(auto);
+        }
+
+        public DtoLib.Resultado Compra_DocumentoAnularNotaCredito(DtoLibCompra.Documento.Anular.NotaCredito.Ficha ficha)
+        {
+            var r01 = ServiceProv.Compra_DocumentoAnular_Verificar(ficha.autoDocumento);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+                return r01;
+            return ServiceProv.Compra_DocumentoAnularNotaCredito (ficha);
         }
 
     }

@@ -17,6 +17,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Concepto_GetFicha("0000000002");
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Concepto.Ficha> Concepto_PorMovDevCompra()
+        {
+            return ServiceProv.Concepto_GetFicha("0000000004");
+        }
+
     }
 
 }

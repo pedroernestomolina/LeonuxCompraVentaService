@@ -12,6 +12,7 @@ namespace ServiceCompra.Interfaces
     {
 
         DtoLib.ResultadoEntidad<DtoLibCompra.Concepto.Ficha> Concepto_PorMovCompra();
+        DtoLib.ResultadoEntidad<DtoLibCompra.Concepto.Ficha> Concepto_PorMovDevCompra();
 
     }
 
