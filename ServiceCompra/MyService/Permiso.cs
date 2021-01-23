@@ -69,6 +69,17 @@ namespace ServiceCompra.MyService
             return ServiceProv.Permiso_Reportes(autoGrupoUsuario);
         }
 
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_CrearGrupo(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_CrearGrupo(autoGrupoUsuario);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_ModificarGrupo(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ModificarGrupo(autoGrupoUsuario);
+        }
+
     }
 
 }
