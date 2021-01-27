@@ -32,11 +32,33 @@ namespace ServiceCompra.MyService
 
         public DtoLib.ResultadoAuto Compra_DocumentoAgregarFactura(DtoLibCompra.Documento.Agregar.Factura.Ficha docFac)
         {
+            var r01 = ServiceProv.Compra_DocumentoAgregar_Verificar(docFac.documento.documentoNro, docFac.documento.controlNro, docFac.documento.autoProveedor);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rt = new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rt;
+            }
             return ServiceProv.Compra_DocumentoAgregarFactura(docFac);
         }
 
         public DtoLib.ResultadoAuto Compra_DocumentoAgregarNC(DtoLibCompra.Documento.Agregar.NotaCredito.Ficha docNC)
         {
+            var r01 = ServiceProv.Compra_DocumentoAgregar_Verificar(docNC.documento.documentoNro, docNC.documento.controlNro, docNC.documento.autoProveedor);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rt = new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rt;
+            }
             return ServiceProv.Compra_DocumentoAgregarNotaCredito(docNC);
         }
 
@@ -56,6 +78,14 @@ namespace ServiceCompra.MyService
             if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
                 return r01;
             return ServiceProv.Compra_DocumentoAnularNotaCredito (ficha);
+        }
+
+        public DtoLib.Resultado Compra_DocumentoCorrectorFactura(DtoLibCompra.Documento.Corrector.Factura.Ficha docFac)
+        {
+            var r01 = ServiceProv.Compra_DocumentoCorrector_Verificar(docFac.documentoNro, docFac.controlNro, docFac.autoProveedor,docFac.autoDoc);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+                return r01;
+            return ServiceProv.Compra_DocumentoCorrectorFactura(docFac);
         }
 
     }

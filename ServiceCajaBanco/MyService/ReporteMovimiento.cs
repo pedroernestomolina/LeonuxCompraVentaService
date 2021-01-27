@@ -57,6 +57,11 @@ namespace ServiceCajaBanco.MyService
             return ServiceProv.Reporte_CobranzaDiara(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Movimiento.ResumenDiarioVentaSucursal.Ficha> Reporte_ResumenDiarioVentaSucursal(DtoLibCajaBanco.Reporte.Movimiento.ResumenDiarioVentaSucursal.Filtro filtro)
+        {
+            return ServiceProv.Reporte_ResumenDiarioVentaSucursal(filtro);
+        }
+
     }
 
 }

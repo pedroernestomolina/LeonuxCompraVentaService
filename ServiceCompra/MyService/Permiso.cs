@@ -64,6 +64,12 @@ namespace ServiceCompra.MyService
             return ServiceProv.Permiso_AdmDoc_Reporte(autoGrupoUsuario);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_AdmDoc_Corrector(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_AdmDoc_Corrector (autoGrupoUsuario);
+        }
+
+
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Reportes(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_Reportes(autoGrupoUsuario);
