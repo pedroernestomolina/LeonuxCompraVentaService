@@ -22,6 +22,8 @@ namespace ServiceInventario.Interfaces
         DtoLib.ResultadoEntidad<DtoLibInventario.Reportes.CompraVentaAlmacen.Ficha> Reportes_CompraVentaAlmacen(DtoLibInventario.Reportes.CompraVentaAlmacen.Filtro filtro);
         DtoLib.ResultadoLista<DtoLibInventario.Reportes.DepositoResumen.Ficha> Reportes_DepositoResumen();
 
+        DtoLib.ResultadoLista<DtoLibInventario.Reportes.MaestroNivelMinimo.Ficha> Reportes_NivelMinimo(DtoLibInventario.Reportes.MaestroNivelMinimo.Filtro filtro);
+
     }
 
 }

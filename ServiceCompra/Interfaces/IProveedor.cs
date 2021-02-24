@@ -13,6 +13,10 @@ namespace ServiceCompra.Interfaces
 
         DtoLib.ResultadoLista<DtoLibCompra.Proveedor.Lista.Resumen> Proveedor_GetLista(DtoLibCompra.Proveedor.Lista.Filtro filtro);
         DtoLib.ResultadoEntidad<DtoLibCompra.Proveedor.Data.Ficha> Proveedor_GetFicha(string autoPrv);
+        DtoLib.ResultadoAuto Proveedor_AgregarFicha(DtoLibCompra.Proveedor.Agregar.Ficha ficha);
+        DtoLib.Resultado Proveedor_EditarFicha(DtoLibCompra.Proveedor.Editar.Ficha ficha);
+        DtoLib.ResultadoLista<DtoLibCompra.Proveedor.Documento.Ficha> Proveedor_Documento_GetLista(DtoLibCompra.Proveedor.Documento.Filtro filtro);
+        DtoLib.ResultadoLista<DtoLibCompra.Proveedor.Articulos.Ficha> Proveedor_CompraArticulos_GetLista(DtoLibCompra.Proveedor.Articulos.Filtro filtro);
 
     }
 

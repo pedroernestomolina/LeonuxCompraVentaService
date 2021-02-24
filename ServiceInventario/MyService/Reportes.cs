@@ -52,6 +52,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Reportes_DepositoResumen();
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Reportes.MaestroNivelMinimo.Ficha> Reportes_NivelMinimo(DtoLibInventario.Reportes.MaestroNivelMinimo.Filtro filtro)
+        {
+            return ServiceProv.Reportes_NivelMinimo(filtro);
+        }
+
     }
 
 }

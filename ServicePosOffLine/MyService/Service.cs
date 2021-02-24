@@ -50,6 +50,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.FechaUltimaActualizaion();
         }
 
+        public DtoLib.ResultadoEntidad<string> CodigoSucursal()
+        {
+            return ServiceProv.CodigoSucursal();
+        }
+
     }
 
 }
