@@ -42,6 +42,32 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_CostoEdadProducto();
         }
 
+
+        public DtoLib.Resultado Configuracion_SetCostoEdadProducto(DtoLibInventario.Configuracion.CostoEdad.Editar.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_SetCostoEdadProducto(ficha);
+        }
+
+        public DtoLib.Resultado Configuracion_SetRedondeoPrecioVenta(DtoLibInventario.Configuracion.RedondeoPrecio.Editar.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_SetRedondeoPrecioVenta(ficha);
+        }
+
+        public DtoLib.Resultado Configuracion_SetPreferenciaRegistroPrecio(DtoLibInventario.Configuracion.PreferenciaPrecio.Editar.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_SetPreferenciaRegistroPrecio(ficha);
+        }
+
+        public DtoLib.Resultado Configuracion_SetMetodoCalculoUtilidad(DtoLibInventario.Configuracion.MetodoCalculoUtilidad.Editar.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_SetMetodoCalculoUtilidad(ficha);
+        }
+
+        public DtoLib.Resultado Configuracion_SetBusquedaPredeterminada(DtoLibInventario.Configuracion.BusquedaPredeterminada.Editar.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_SetBusquedaPredeterminada(ficha);
+        }
+
     }
 
 }
