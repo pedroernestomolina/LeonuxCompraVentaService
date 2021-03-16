@@ -32,6 +32,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Grupo_Editar(ficha);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Grupo.Resumen> Grupo_GetListaByDepartamento(string id)
+        {
+            return ServiceProv.Grupo_GetListaByDepartamento(id);
+        }
+
     }
 
 }

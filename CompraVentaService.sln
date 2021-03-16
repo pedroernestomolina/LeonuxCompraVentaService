@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceSistema", "ServiceSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceCompra", "ServiceCompra\ServiceCompra.csproj", "{36DF3DED-4CAC-43C7-8990-EA8242E9448E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicePos", "ServicePos\ServicePos.csproj", "{5FC87FCF-DFB2-4658-82EC-6E4642857C3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{36DF3DED-4CAC-43C7-8990-EA8242E9448E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36DF3DED-4CAC-43C7-8990-EA8242E9448E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36DF3DED-4CAC-43C7-8990-EA8242E9448E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC87FCF-DFB2-4658-82EC-6E4642857C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC87FCF-DFB2-4658-82EC-6E4642857C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC87FCF-DFB2-4658-82EC-6E4642857C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC87FCF-DFB2-4658-82EC-6E4642857C3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +64,6 @@ Global
 		{B0A6222C-61FE-4AEA-A05E-2B1192ED13ED} = {7BC45D56-2ED6-42FC-BCE1-CB4C1D93AAD4}
 		{8A1A6E89-06AD-4BC2-8ADB-4474C83FE659} = {7BC45D56-2ED6-42FC-BCE1-CB4C1D93AAD4}
 		{36DF3DED-4CAC-43C7-8990-EA8242E9448E} = {7BC45D56-2ED6-42FC-BCE1-CB4C1D93AAD4}
+		{5FC87FCF-DFB2-4658-82EC-6E4642857C3D} = {7BC45D56-2ED6-42FC-BCE1-CB4C1D93AAD4}
 	EndGlobalSection
 EndGlobal
