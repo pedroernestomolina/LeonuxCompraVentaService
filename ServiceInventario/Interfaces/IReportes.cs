@@ -24,6 +24,8 @@ namespace ServiceInventario.Interfaces
 
         DtoLib.ResultadoLista<DtoLibInventario.Reportes.MaestroNivelMinimo.Ficha> Reportes_NivelMinimo(DtoLibInventario.Reportes.MaestroNivelMinimo.Filtro filtro);
 
+        DtoLib.ResultadoLista<DtoLibInventario.Reportes.Valorizacion.Ficha> Reportes_Valorizacion(DtoLibInventario.Reportes.Valorizacion.Filtro filtro);
+
     }
 
 }

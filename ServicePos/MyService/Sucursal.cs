@@ -14,12 +14,12 @@ namespace ServicePos.MyService
 
         public DtoLib.ResultadoLista<DtoLibPos.Sucursal.Lista.Ficha> Sucursal_GetLista(DtoLibPos.Sucursal.Lista.Filtro filtro)
         {
-            return Sucursal_GetLista(filtro);
+            return ServiceProv.Sucursal_GetLista(filtro);
         }
 
         public DtoLib.ResultadoEntidad<DtoLibPos.Sucursal.Entidad.Ficha> Sucursal_GetFichaById(string id)
         {
-            return Sucursal_GetFichaById(id);
+            return ServiceProv.Sucursal_GetFichaById(id);
         }
 
     }

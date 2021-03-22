@@ -57,6 +57,12 @@ namespace ServiceInventario.MyService
             return ServiceProv.Reportes_NivelMinimo(filtro);
         }
 
+
+        public DtoLib.ResultadoLista<DtoLibInventario.Reportes.Valorizacion.Ficha> Reportes_Valorizacion(DtoLibInventario.Reportes.Valorizacion.Filtro filtro)
+        {
+            return ServiceProv.Reportes_Valorizacion(filtro);
+        }
+
     }
 
 }

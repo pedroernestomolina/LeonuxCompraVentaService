@@ -173,6 +173,12 @@ namespace ServiceInventario.MyService
             return ServiceProv.Permiso_Estadistica(autoGrupoUsuario);
         }
 
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Configuracion_Sistema(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Configuracion_Sistema(autoGrupoUsuario);
+        }
+
     }
 
 }

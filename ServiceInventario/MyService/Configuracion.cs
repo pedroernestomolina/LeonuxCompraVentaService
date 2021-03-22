@@ -68,6 +68,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_SetBusquedaPredeterminada(ficha);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Configuracion.MetodoCalculoUtilidad.CapturarData.Ficha> Configuracion_MetodoCalculoUtilidad_CapturarData()
+        {
+            return ServiceProv.Configuracion_MetodoCalculoUtilidad_CapturarData();
+        }
+
     }
 
 }

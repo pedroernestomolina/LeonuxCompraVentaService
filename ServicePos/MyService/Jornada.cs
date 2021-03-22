@@ -43,6 +43,16 @@ namespace ServicePos.MyService
             return ServiceProv.Jornada_Cerrar(ficha);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPos.Pos.EnUso.Ficha> Jornada_EnUso_GetByIdEquipo(string idEquipo)
+        {
+            return ServiceProv.Jornada_EnUso_GetByIdEquipo(idEquipo);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Pos.EnUso.Ficha> Jornada_EnUso_GetById(int id)
+        {
+            return ServiceProv.Jornada_EnUso_GetById(id);
+        }
+
     }
 
 }
