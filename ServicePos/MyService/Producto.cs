@@ -17,6 +17,31 @@ namespace ServicePos.MyService
             return ServiceProv.Producto_GetLista(filtro);
         }
 
+        public DtoLib.ResultadoAuto Producto_BusquedaByCodigo(string buscar)
+        {
+            return ServiceProv.Producto_BusquedaByCodigo(buscar);
+        }
+
+        public DtoLib.ResultadoAuto Producto_BusquedaByPlu(string buscar)
+        {
+            return ServiceProv.Producto_BusquedaByPlu(buscar);
+        }
+
+        public DtoLib.ResultadoAuto Producto_BusquedaByCodigoBarra(string buscar)
+        {
+            return ServiceProv.Producto_BusquedaByCodigoBarra(buscar);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Producto.Entidad.Ficha> Producto_GetFichaById(string auto)
+        {
+            return ServiceProv.Producto_GetFichaById(auto);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Producto.Existencia.Entidad.Ficha> Producto_Existencia_GetByPrdDeposito(DtoLibPos.Producto.Existencia.Buscar.Ficha ficha)
+        {
+            return ServiceProv.Producto_Existencia_GetByPrdDeposito(ficha);
+        }
+
     }
 
 }
