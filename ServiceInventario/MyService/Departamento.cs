@@ -32,6 +32,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Departamento_Editar(ficha);
         }
 
+        public DtoLib.Resultado Departamento_Eliminar(string auto)
+        {
+            return ServiceProv.Departamento_Eliminar(auto);
+        }
+
     }
 
 }

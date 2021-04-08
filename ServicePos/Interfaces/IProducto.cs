@@ -17,6 +17,7 @@ namespace ServicePos.Interfaces
         DtoLib.ResultadoAuto Producto_BusquedaByPlu(string buscar);
         DtoLib.ResultadoAuto Producto_BusquedaByCodigoBarra(string buscar);
         DtoLib.ResultadoEntidad<DtoLibPos.Producto.Existencia.Entidad.Ficha> Producto_Existencia_GetByPrdDeposito(DtoLibPos.Producto.Existencia.Buscar.Ficha ficha);
+        DtoLib.Resultado Producto_Existencia_Bloquear (DtoLibPos.Producto.Existencia.Bloquear.Ficha ficha, bool validarExistencia);
 
     }
 

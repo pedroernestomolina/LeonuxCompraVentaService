@@ -42,6 +42,14 @@ namespace ServicePos.MyService
             return ServiceProv.Producto_Existencia_GetByPrdDeposito(ficha);
         }
 
+        public DtoLib.Resultado Producto_Existencia_Bloquear(DtoLibPos.Producto.Existencia.Bloquear.Ficha ficha, bool validarExistencia)
+        {
+            if (validarExistencia)
+                return ServiceProv.Producto_Existencia_BloquearEnPositivo(ficha);
+            else
+                return ServiceProv.Producto_Existencia_BloquearEnNegativo(ficha);
+        }
+
     }
 
 }

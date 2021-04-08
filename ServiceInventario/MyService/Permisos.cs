@@ -54,6 +54,10 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_ModificarDepartamento (autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarDepartamento(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_EliminarDepartamento(autoGrupoUsuario);
+        }
 
 
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_CrearGrupo(string autoGrupoUsuario)

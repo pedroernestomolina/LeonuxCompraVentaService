@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IAnalisis.cs" />
+    <Compile Include="Interfaces\IAuditoria.cs" />
     <Compile Include="Interfaces\IConcepto.cs" />
     <Compile Include="Interfaces\IConfiguracion.cs" />
     <Compile Include="Interfaces\ICosto.cs" />
@@ -69,12 +70,14 @@
     <Compile Include="Interfaces\IReporteDocumentos.cs" />
     <Compile Include="Interfaces\IReportes.cs" />
     <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="Interfaces\ISistema.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
     <Compile Include="Interfaces\ITasaImpuesto.cs" />
     <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Interfaces\IVisor.cs" />
     <Compile Include="MyService\Analisis.cs" />
+    <Compile Include="MyService\Auditoria.cs" />
     <Compile Include="MyService\Concepto.cs" />
     <Compile Include="MyService\Configuracion.cs" />
     <Compile Include="MyService\Costo.cs" />
@@ -91,6 +94,7 @@
     <Compile Include="MyService\Proveedor.cs" />
     <Compile Include="MyService\Reportes.cs" />
     <Compile Include="MyService\Service.cs" />
+    <Compile Include="MyService\Sistema.cs" />
     <Compile Include="MyService\Sucursal.cs" />
     <Compile Include="MyService\TasaImpuesto.cs" />
     <Compile Include="MyService\Tool.cs" />
