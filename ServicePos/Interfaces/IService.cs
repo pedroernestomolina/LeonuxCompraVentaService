@@ -11,7 +11,7 @@ namespace ServicePos.Interfaces
     public interface IService : IProducto, ICliente, ISucursal, IDeposito,
         ICobrador, IVendedor, IMedioPago, IConcepto, ITransporte, ISistema,
         IFiscal, IUsuario, IPermiso, IConfiguracion, IJornada, IDocumento,
-        IVenta
+        IVenta, IPendiente
     {
 
         DtoLib.ResultadoEntidad<DateTime> FechaServidor();

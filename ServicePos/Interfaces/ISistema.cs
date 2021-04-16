@@ -10,6 +10,11 @@ namespace ServicePos.Interfaces
     
     public interface ISistema
     {
+
+        DtoLib.ResultadoEntidad<DtoLibPos.Sistema.TipoDocumento.Entidad.Ficha> Sistema_TipoDocumento_GetFichaById(string id);
+
+        DtoLib.ResultadoEntidad<DtoLibPos.Sistema.Serie.Entidad.Ficha> Sistema_Serie_GetFichaById(string id);
+
     }
 
 }
