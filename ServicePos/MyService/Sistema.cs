@@ -22,6 +22,11 @@ namespace ServicePos.MyService
             return ServiceProv.Sistema_Serie_GetFichaById(id);
         }
 
+        public DtoLib.ResultadoEntidad<string> Sistema_ClaveAcceso_GetByIdNivel(int id)
+        {
+            return ServiceProv.Sistema_ClaveAcceso_GetByIdNivel(id);
+        }
+
     }
 
 }
