@@ -12,7 +12,7 @@ namespace ServicePos.MyService
     public partial class Service : IService
     {
 
-        public DtoLib.ResultadoEntidad<decimal> Configuracion_FactorDivisa()
+        public DtoLib.ResultadoEntidad<string> Configuracion_FactorDivisa()
         {
             return ServiceProv.Configuracion_FactorDivisa();
         }
@@ -25,6 +25,11 @@ namespace ServicePos.MyService
         public DtoLib.ResultadoEntidad<DtoLibPos.Configuracion.Entidad.Ficha> Configuracion_Pos_GetFicha()
         {
             return ServiceProv.Configuracion_Pos_GetFicha();
+        }
+
+        public DtoLib.Resultado Configuracion_Pos_Inicializar()
+        {
+            return ServiceProv.Configuracion_Pos_Inicializar();
         }
 
     }

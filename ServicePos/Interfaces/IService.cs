@@ -15,6 +15,8 @@ namespace ServicePos.Interfaces
     {
 
         DtoLib.ResultadoEntidad<DateTime> FechaServidor();
+        DtoLib.Resultado Test();
+
         //DtoLib.ResultadoEntidad<DtoLibInventario.Empresa.Data.Ficha> Empresa_Datos();
         //DtoLib.ResultadoEntidad<DtoLibPosOffLine.Sistema.InformacionBD.Ficha> InformacionBD();
 

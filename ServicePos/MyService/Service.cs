@@ -38,6 +38,11 @@ namespace ServicePos.MyService
         //    return ServiceProv.Empresa_Datos();
         //}
 
+        public DtoLib.Resultado Test()
+        {
+            return ServiceProv.Test();
+        }
+
     }
 
 }

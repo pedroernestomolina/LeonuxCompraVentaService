@@ -64,6 +64,11 @@ namespace ServicePos.MyService
             return ServiceProv.Documento_Anular_Factura(ficha);
         }
 
+        public DtoLib.ResultadoLista<DtoLibPos.Documento.Entidad.FichaMetodoPago> Documento_Get_MetodosPago_ByIdRecibo(string autoRecibo)
+        {
+            return ServiceProv.Documento_Get_MetodosPago_ByIdRecibo(autoRecibo);
+        }
+
     }
 
 }

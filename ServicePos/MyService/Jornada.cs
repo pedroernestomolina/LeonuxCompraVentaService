@@ -53,6 +53,11 @@ namespace ServicePos.MyService
             return ServiceProv.Jornada_EnUso_GetById(id);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPos.Pos.Resumen.Ficha> Jornada_Resumen_GetByIdResumen(int id)
+        {
+            return ServiceProv.Jornada_Resumen_GetByIdResumen(id);
+        }
+
     }
 
 }
