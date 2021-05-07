@@ -37,6 +37,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Concepto_Editar(ficha);
         }
 
+        public DtoLib.Resultado Concepto_Eliminar(string auto)
+        {
+            return ServiceProv.Concepto_Eliminar(auto);
+        }
+
     }
 
 }

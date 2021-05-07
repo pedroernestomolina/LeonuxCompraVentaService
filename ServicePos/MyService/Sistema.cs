@@ -35,6 +35,11 @@ namespace ServicePos.MyService
             return ServiceProv.Sistema_ClaveAcceso_GetByIdNivel(id);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPos.Sistema.Empresa.Ficha> Sistema_Empresa_GetFicha()
+        {
+            return ServiceProv.Sistema_Empresa_GetFicha();
+        }
+
     }
 
 }

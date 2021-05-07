@@ -32,6 +32,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.EmpaqueMedida_Editar(ficha);
         }
 
+        public DtoLib.Resultado EmpaqueMedida_Eliminar(string auto)
+        {
+            return ServiceProv.EmpaqueMedida_Eliminar(auto);
+        }
+
     }
 
 }

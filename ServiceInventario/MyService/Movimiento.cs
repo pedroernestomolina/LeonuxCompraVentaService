@@ -218,6 +218,32 @@ namespace ServiceInventario.MyService
 
             return ServiceProv.Producto_Movimiento_Ajuste_Anular(ficha);
         }
+        
+        public DtoLib.ResultadoAuto Producto_Movimiento_Traslado_Devolucion_Insertar(DtoLibInventario.Movimiento.Traslado.Insertar.Ficha ficha)
+        {
+            var lista = new List<DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha>();
+            foreach (var rg in ficha.prdDeposito)
+            {
+                lista.Add(new DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha()
+                {
+                    autoProducto = rg.autoProducto,
+                    autoDeposito = rg.autoDepositoOrigen,
+                    cantidadUnd = rg.cantidadUnd,
+                });
+            }
+            var rt = ServiceProv.Producto_Movimiento_Verificar_ExistenciaDisponible(lista);
+            if (rt.Result == DtoLib.Enumerados.EnumResult.isError || rt.Entidad == false)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = rt.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+            return ServiceProv.Producto_Movimiento_Traslado_Devolucion_Insertar(ficha);
+        }
 
     }
 

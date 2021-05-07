@@ -32,6 +32,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Marca_Editar(ficha);
         }
 
+        public DtoLib.Resultado Marca_Eliminar(string auto)
+        {
+            return ServiceProv.Marca_Eliminar(auto);
+        }
+
     }
 
 }

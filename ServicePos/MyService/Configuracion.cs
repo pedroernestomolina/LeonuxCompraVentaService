@@ -32,6 +32,16 @@ namespace ServicePos.MyService
             return ServiceProv.Configuracion_Pos_Inicializar();
         }
 
+        public DtoLib.Resultado Configuracion_Pos_CambioDepositoSucursalFrio()
+        {
+            return ServiceProv.Configuracion_Pos_CambioDepositoSucursalFrio();
+        }
+
+        public DtoLib.Resultado Configuracion_Pos_CambioDepositoSucursalViveres()
+        {
+            return ServiceProv.Configuracion_Pos_CambioDepositoSucursalViveres();
+        }
+
     }
 
 }

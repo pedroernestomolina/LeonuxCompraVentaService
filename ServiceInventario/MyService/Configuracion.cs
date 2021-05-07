@@ -22,7 +22,7 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_MetodoCalculoUtilidad();
         }
 
-        public DtoLib.ResultadoEntidad<decimal> Configuracion_TasaCambioActual()
+        public DtoLib.ResultadoEntidad<string> Configuracion_TasaCambioActual()
         {
             return ServiceProv.Configuracion_TasaCambioActual();
         }

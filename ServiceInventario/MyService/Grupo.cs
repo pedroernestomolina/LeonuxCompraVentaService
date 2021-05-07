@@ -37,6 +37,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Grupo_GetListaByDepartamento(id);
         }
 
+        public DtoLib.Resultado Grupo_Eliminar(string auto)
+        {
+            return ServiceProv.Grupo_Eliminar(auto);
+        }
+
     }
 
 }
