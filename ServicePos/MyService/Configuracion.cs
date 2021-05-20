@@ -42,6 +42,11 @@ namespace ServicePos.MyService
             return ServiceProv.Configuracion_Pos_CambioDepositoSucursalViveres();
         }
 
+        public DtoLib.Resultado Configuracion_Pos_CambioDepositoSucursal(DtoLibPos.Configuracion.CambioDepositoSucursal.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_Pos_CambioDepositoSucursal(ficha);
+        }
+
     }
 
 }
