@@ -25,6 +25,10 @@ namespace ServicePos.MyService
         {
             return ServiceProv.Sistema_Serie_GetFichaById(id);
         }
+        public DtoLib.ResultadoEntidad<DtoLibPos.Sistema.Serie.Entidad.Ficha> Sistema_Serie_GetFichaByNombre(string nombre)
+        {
+            return ServiceProv.Sistema_Serie_GetFichaByNombre(nombre);
+        }
         public DtoLib.ResultadoLista<DtoLibPos.Sistema.Serie.Entidad.Ficha> Sistema_Serie_GetLista()
         {
             return ServiceProv.Sistema_Serie_GetLista();
