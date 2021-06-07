@@ -22,6 +22,30 @@ namespace ServicePos.MyService
             return ServiceProv.Permiso_Pos(idGrupoUsu, codFuncion);
         }
 
+        //
+
+        public DtoLib.ResultadoEntidad<string> Permiso_PedirClaveAcceso_NivelMaximo()
+        {
+            return ServiceProv.Permiso_PedirClaveAcceso_NivelMaximo();
+        }
+
+        public DtoLib.ResultadoEntidad<string> Permiso_PedirClaveAcceso_NivelMedio()
+        {
+            return ServiceProv.Permiso_PedirClaveAcceso_NivelMedio();
+        }
+
+        public DtoLib.ResultadoEntidad<string> Permiso_PedirClaveAcceso_NivelMinimo()
+        {
+            return ServiceProv.Permiso_PedirClaveAcceso_NivelMinimo();
+        }
+
+        //
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_Reportes(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_VentaAdm_Reportes(idGrupoUsu);
+        }
+
     }
 
 }

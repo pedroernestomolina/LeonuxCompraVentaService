@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\IClienteGrupo.cs" />
+    <Compile Include="Interfaces\IClienteZona.cs" />
     <Compile Include="Interfaces\ICobrador.cs" />
     <Compile Include="Interfaces\IConcepto.cs" />
     <Compile Include="Interfaces\IConfiguracion.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Interfaces\IPendiente.cs" />
     <Compile Include="Interfaces\IPermiso.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
+    <Compile Include="Interfaces\IReportesAdm.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISistema.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
@@ -71,6 +74,8 @@
     <Compile Include="Interfaces\IVendedor.cs" />
     <Compile Include="Interfaces\IVenta.cs" />
     <Compile Include="MyService\Cliente.cs" />
+    <Compile Include="MyService\ClienteGrupo.cs" />
+    <Compile Include="MyService\ClienteZona.cs" />
     <Compile Include="MyService\Cobrador.cs" />
     <Compile Include="MyService\Concepto.cs" />
     <Compile Include="MyService\Configuracion.cs" />
@@ -82,6 +87,7 @@
     <Compile Include="MyService\Pendiente.cs" />
     <Compile Include="MyService\Permiso.cs" />
     <Compile Include="MyService\Producto.cs" />
+    <Compile Include="MyService\ReportesAdm.cs" />
     <Compile Include="MyService\Service.cs" />
     <Compile Include="MyService\Sistema.cs" />
     <Compile Include="MyService\Sucursal.cs" />
