@@ -24,6 +24,17 @@ namespace ServicePos.Interfaces
 
         DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_Reportes(string idGrupoUsu);
 
+        //
+
+        DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo(string idGrupoUsu);
+        DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo_Agregar(string idGrupoUsu);
+        DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo_Editar(string idGrupoUsu);
+
+        //
+        DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteZona(string idGrupoUsu);
+        DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteZona_Agregar(string idGrupoUsu);
+        DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteZona_Editar(string idGrupoUsu);
+
     }
 
 }

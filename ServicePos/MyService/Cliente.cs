@@ -32,6 +32,16 @@ namespace ServicePos.MyService
             return ServiceProv.Cliente_Agregar(ficha);
         }
 
+        public DtoLib.ResultadoLista<DtoLibPos.Cliente.Documento.Ficha> Cliente_Documento_GetLista(DtoLibPos.Cliente.Documento.Filtro filtro)
+        {
+            return ServiceProv.Cliente_Documento_GetLista(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibPos.Cliente.Articulos.Ficha> Cliente_ArticuloVenta_GetLista(DtoLibPos.Cliente.Articulos.Filtro filtro)
+        {
+            return ServiceProv.Cliente_ArticuloVenta_GetLista(filtro);
+        }
+
     }
 
 }

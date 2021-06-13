@@ -17,6 +17,31 @@ namespace ServicePos.MyService
             return ServiceProv.ReportesAdm_GeneralDocumento(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.GeneralPorDepartamento.Ficha> ReportesAdm_GeneralPorDepartamento(DtoLibPos.Reportes.VentaAdministrativa.GeneralPorDepartamento.Filtro filtro)
+        {
+            return ServiceProv.ReportesAdm_GeneralPorDepartamento(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.GeneralPorGrupo.Ficha> ReportesAdm_GeneralPorGrupo(DtoLibPos.Reportes.VentaAdministrativa.GeneralPorGrupo.Filtro filtro)
+        {
+            return ServiceProv.ReportesAdm_GeneralPorGrupo(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Resumen.Ficha> ReportesAdm_Resumen(DtoLibPos.Reportes.VentaAdministrativa.Resumen.Filtro filtro)
+        {
+            return ServiceProv.ReportesAdm_Resumen(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.VentaPorProducto.Ficha> ReportesAdm_VentaPorProducto(DtoLibPos.Reportes.VentaAdministrativa.VentaPorProducto.Filtro filtro)
+        {
+            return ServiceProv.ReportesAdm_VentaPorProducto(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.GeneralDocumentoDetalle.Ficha> Reporte_GenrealDocumentoDetalle(DtoLibPos.Reportes.VentaAdministrativa.GeneralDocumentoDetalle.Filtro filtro)
+        {
+            return ServiceProv.Reporte_GenrealDocumentoDetalle(filtro);
+        }
+
     }
 
 }

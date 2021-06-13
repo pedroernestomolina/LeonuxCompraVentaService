@@ -46,6 +46,42 @@ namespace ServicePos.MyService
             return ServiceProv.Permiso_VentaAdm_Reportes(idGrupoUsu);
         }
 
+
+        //
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_ClienteGrupo(idGrupoUsu);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo_Agregar(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_ClienteGrupo_Agregar(idGrupoUsu);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo_Editar(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_ClienteGrupo_Editar(idGrupoUsu);
+        }
+
+
+        //
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteZona(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_ClienteZona(idGrupoUsu);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteZona_Agregar(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_ClienteZona_Agregar(idGrupoUsu);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteZona_Editar(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_ClienteZona_Editar(idGrupoUsu);
+        }
+
     }
 
 }
