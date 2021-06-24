@@ -97,6 +97,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Configuracion_MovConceptoInv();
         }
 
+        public DtoLib.ResultadoEntidad<bool> Configuracion_Habilitar_Precio5_VentaMayor()
+        {
+            return ServiceProv.Configuracion_Habilitar_Precio5_VentaMayor();
+        }
+
     }
 
 }

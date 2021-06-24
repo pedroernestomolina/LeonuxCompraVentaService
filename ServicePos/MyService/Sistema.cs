@@ -44,6 +44,11 @@ namespace ServicePos.MyService
             return ServiceProv.Sistema_Empresa_GetFicha();
         }
 
+        public DtoLib.ResultadoLista<DtoLibPos.Sistema.Estado.Entidad.Ficha> Sistema_Estado_GetLista()
+        {
+            return ServiceProv.Sistema_Estado_GetLista();
+        }
+
     }
 
 }

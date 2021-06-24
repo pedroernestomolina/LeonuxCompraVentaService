@@ -73,6 +73,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_MetodoCalculoUtilidad_CapturarData();
         }
 
+        public DtoLib.ResultadoEntidad<string> Configuracion_HabilitarPrecio_5_ParaVentaMayorPos()
+        {
+            return ServiceProv.Configuracion_HabilitarPrecio_5_ParaVentaMayorPos();
+        }
+
     }
 
 }

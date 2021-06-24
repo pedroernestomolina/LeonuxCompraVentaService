@@ -30,6 +30,8 @@ namespace ServicePosOffLine.Interfaces
         DtoLib.Resultado Configuracion_Actualizar(DtoLibPosOffLine.Configuracion.Guardar.Ficha ficha);
         DtoLib.ResultadoEntidad<DtoLibPosOffLine.Configuracion.Actual.Ficha> Configuracion_ActualCargar();
 
+        DtoLib.ResultadoEntidad<bool> Configuracion_Habilitar_Precio5_VentaMayor();
+
     }
 
 }
