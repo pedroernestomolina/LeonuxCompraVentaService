@@ -29,6 +29,21 @@ namespace ServicePos.MyService
 
         public DtoLib.ResultadoAuto Cliente_Agregar(DtoLibPos.Cliente.Agregar.Ficha ficha)
         {
+            var fichaVal = new DtoLibPos.Cliente.Agregar.FichaValidar ()
+            {
+                codigo = ficha.codigo,
+                ciRif= ficha.ciRif,
+            };
+            var r01 = ServiceProv.Cliente_Agregar_Validar (fichaVal);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                return new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+            }
             return ServiceProv.Cliente_Agregar(ficha);
         }
 
@@ -40,6 +55,16 @@ namespace ServicePos.MyService
         public DtoLib.ResultadoLista<DtoLibPos.Cliente.Articulos.Ficha> Cliente_ArticuloVenta_GetLista(DtoLibPos.Cliente.Articulos.Filtro filtro)
         {
             return ServiceProv.Cliente_ArticuloVenta_GetLista(filtro);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Cliente.Editar.ObtenerData.Ficha> Cliente_Editar_GetFicha(string autoId)
+        {
+            return ServiceProv.Cliente_Editar_GetFicha(autoId);
+        }
+
+        public DtoLib.Resultado Cliente_Editar(DtoLibPos.Cliente.Editar.Actualizar.Ficha ficha)
+        {
+            return ServiceProv.Cliente_Editar(ficha);
         }
 
     }
