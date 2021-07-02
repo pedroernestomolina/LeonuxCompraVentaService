@@ -42,6 +42,11 @@ namespace ServicePos.MyService
             return ServiceProv.Reporte_GenrealDocumentoDetalle(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Ficha> Reporte_Consolidado(DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Filtro filtro)
+        {
+            return ServiceProv.Reporte_Consolidado(filtro);
+        }
+
     }
 
 }

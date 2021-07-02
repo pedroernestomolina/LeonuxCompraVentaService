@@ -64,7 +64,53 @@ namespace ServicePos.MyService
 
         public DtoLib.Resultado Cliente_Editar(DtoLibPos.Cliente.Editar.Actualizar.Ficha ficha)
         {
+            var fichaVal = new DtoLibPos.Cliente.Editar.Actualizar.FichaValidar()
+            {
+                autoId = ficha.autoId,
+                codigo = ficha.codigo,
+                ciRif = ficha.ciRif,
+            };
+            var r01 = ServiceProv.Cliente_Editar_Validar(fichaVal);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                return new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+            }
             return ServiceProv.Cliente_Editar(ficha);
+        }
+
+        public DtoLib.Resultado Cliente_Activar(DtoLibPos.Cliente.EstatusActivarInactivar.Ficha ficha)
+        {
+            var r01 = ServiceProv.Cliente_EstatusActivar_Validar (ficha.autoId);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                return new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+            }
+            return ServiceProv.Cliente_Activar(ficha);
+        }
+
+        public DtoLib.Resultado Cliente_Inactivar(DtoLibPos.Cliente.EstatusActivarInactivar.Ficha ficha)
+        {
+            var r01 = ServiceProv.Cliente_EstatusInactivar_Validar(ficha.autoId);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                return new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+            }
+            return ServiceProv.Cliente_Inactivar(ficha);
         }
 
     }

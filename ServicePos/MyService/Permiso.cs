@@ -82,6 +82,34 @@ namespace ServicePos.MyService
             return ServiceProv.Permiso_ClienteZona_Editar(idGrupoUsu);
         }
 
+
+        //
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_Cliente(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_Cliente (idGrupoUsu);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_Cliente_Agregar(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_Cliente_Agregar(idGrupoUsu);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_Cliente_Editar(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_Cliente_Editar(idGrupoUsu);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_Cliente_Reportes(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_Cliente_Reportes(idGrupoUsu);
+        }
+        
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_Cliente_ActivarInactivar(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_Cliente_ActivarInactivar(idGrupoUsu);
+        }
+
     }
 
 }

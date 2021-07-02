@@ -19,6 +19,8 @@ namespace ServicePos.Interfaces
         DtoLib.Resultado Cliente_Editar(DtoLibPos.Cliente.Editar.Actualizar.Ficha ficha);
         DtoLib.ResultadoLista<DtoLibPos.Cliente.Documento.Ficha> Cliente_Documento_GetLista(DtoLibPos.Cliente.Documento.Filtro filtro);
         DtoLib.ResultadoLista<DtoLibPos.Cliente.Articulos.Ficha> Cliente_ArticuloVenta_GetLista(DtoLibPos.Cliente.Articulos.Filtro filtro);
+        DtoLib.Resultado Cliente_Activar(DtoLibPos.Cliente.EstatusActivarInactivar.Ficha ficha);
+        DtoLib.Resultado Cliente_Inactivar(DtoLibPos.Cliente.EstatusActivarInactivar.Ficha ficha);
 
     }
 
