@@ -73,6 +73,11 @@ namespace ServiceCajaBanco.MyService
         {
             return ServiceProv.Reporte_Analisis_VentaProducto(filtro);
         }
+        
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Analisis.VentaDiaria.Ficha> Reporte_Analisis_VentaDiaria(DtoLibCajaBanco.Reporte.Analisis.VentaDiaria.Filtro filtro)
+        {
+            return ServiceProv.Reporte_Analisis_VentaDiaria(filtro);
+        }
 
     }
 

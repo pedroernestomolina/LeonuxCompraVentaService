@@ -37,6 +37,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Visor_CostoExistencia(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Visor.Precio.Ficha> Visor_Precio(DtoLibInventario.Visor.Precio.Filtro filtro)
+        {
+            return ServiceProv.Visor_Precio(filtro);
+        }
+
     }
 
 }

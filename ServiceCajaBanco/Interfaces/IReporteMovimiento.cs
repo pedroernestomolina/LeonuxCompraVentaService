@@ -25,6 +25,7 @@ namespace ServiceCajaBanco.Interfaces
         //ANALISIS
         DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Analisis.VentaPromedio.Ficha> Reporte_Analisis_VentaPromedio(DtoLibCajaBanco.Reporte.Analisis.VentaPromedio.Filtro filtro);
         DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Analisis.VentaProducto.Ficha> Reporte_Analisis_VentaProducto(DtoLibCajaBanco.Reporte.Analisis.VentaProducto.Filtro filtro);
+        DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Analisis.VentaDiaria.Ficha> Reporte_Analisis_VentaDiaria(DtoLibCajaBanco.Reporte.Analisis.VentaDiaria.Filtro filtro);
 
     }
 
