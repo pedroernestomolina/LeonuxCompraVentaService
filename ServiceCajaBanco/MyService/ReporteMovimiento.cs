@@ -79,6 +79,11 @@ namespace ServiceCajaBanco.MyService
             return ServiceProv.Reporte_Analisis_VentaDiaria(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibCajaBanco.Reporte.Analisis.VentaPorCierre.Ficha> Reporte_Analisis_VentaPorCierre(DtoLibCajaBanco.Reporte.Analisis.VentaPorCierre.Filtro filtro)
+        {
+            return ServiceProv.Reporte_Analisis_VentaPorCierre(filtro);
+        }
+
     }
 
 }
