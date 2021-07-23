@@ -61,6 +61,7 @@
     <Compile Include="Interfaces\IPermiso.cs" />
     <Compile Include="Interfaces\IProducto.cs" />
     <Compile Include="Interfaces\IProveedor.cs" />
+    <Compile Include="Interfaces\IReporteProv.cs" />
     <Compile Include="Interfaces\IReportes.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ISucursal.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="MyService\Permiso.cs" />
     <Compile Include="MyService\Producto.cs" />
     <Compile Include="MyService\Proveedor.cs" />
+    <Compile Include="MyService\ReporteProv.cs" />
     <Compile Include="MyService\Reportes.cs" />
     <Compile Include="MyService\Service.cs" />
     <Compile Include="MyService\Sucursal.cs" />
