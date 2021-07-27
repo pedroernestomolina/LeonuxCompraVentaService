@@ -88,6 +88,11 @@ namespace ServiceCompra.MyService
             return ServiceProv.Compra_DocumentoAnularNotaCredito(ficha);
         }
 
+        public DtoLib.ResultadoLista<DtoLibCompra.Documento.ListaItemImportar.Ficha> Compra_Documento_ItemImportar_GetLista(string autoDoc)
+        {
+            return ServiceProv.Compra_Documento_ItemImportar_GetLista(autoDoc);
+        }
+
     }
 
 }
