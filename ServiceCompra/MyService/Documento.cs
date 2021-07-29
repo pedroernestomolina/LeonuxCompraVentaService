@@ -93,6 +93,16 @@ namespace ServiceCompra.MyService
             return ServiceProv.Compra_Documento_ItemImportar_GetLista(autoDoc);
         }
 
+        public DtoLib.Resultado Compra_Documento_Pendiente_Agregar(DtoLibCompra.Documento.Pendiente.Agregar.Ficha ficha)
+        {
+            return ServiceProv.Compra_Documento_Pendiente_Agregar(ficha);
+        }
+
+        public DtoLib.ResultadoEntidad<int> Compra_Documento_Pendiente_Cnt(DtoLibCompra.Documento.Pendiente.Filtro.Ficha filtro)
+        {
+            return ServiceProv.Compra_Documento_Pendiente_Cnt(filtro);
+        }
+
     }
 
 }
