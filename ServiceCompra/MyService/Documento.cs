@@ -103,6 +103,21 @@ namespace ServiceCompra.MyService
             return ServiceProv.Compra_Documento_Pendiente_Cnt(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibCompra.Documento.Pendiente.Lista.Ficha> Compra_Documento_Pendiente_GetLista(DtoLibCompra.Documento.Pendiente.Filtro.Ficha filtro)
+        {
+            return ServiceProv.Compra_Documento_Pendiente_GetLista(filtro);
+        }
+
+        public DtoLib.Resultado Compra_Documento_Pendiente_Eliminar(int idPend)
+        {
+            return ServiceProv.Compra_Documento_Pendiente_Eliminar(idPend);
+        }
+
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Documento.Pendiente.Abrir.Ficha> Compra_Documento_Pendiente_Abrir(int idPend)
+        {
+            return ServiceProv.Compra_Documento_Pendiente_Abrir(idPend);
+        }
+
     }
 
 }
