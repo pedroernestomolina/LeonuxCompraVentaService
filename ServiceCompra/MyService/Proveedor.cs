@@ -73,6 +73,16 @@ namespace ServiceCompra.MyService
             return ServiceProv.Proveedor_CompraArticulos_GetLista(filtro);
         }
 
+        public DtoLib.Resultado Proveedor_Activar(DtoLibCompra.Proveedor.ActivarInactivar.Ficha ficha)
+        {
+            return ServiceProv.Proveedor_Activar(ficha);
+        }
+
+        public DtoLib.Resultado Proveedor_Inactivar(DtoLibCompra.Proveedor.ActivarInactivar.Ficha ficha)
+        {
+            return ServiceProv.Proveedor_Inactivar(ficha);
+        }
+
     }
 
 }

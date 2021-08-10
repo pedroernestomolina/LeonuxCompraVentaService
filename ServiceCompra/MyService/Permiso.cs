@@ -27,6 +27,7 @@ namespace ServiceCompra.MyService
             return ServiceProv.Permiso_PedirClaveAcceso_NivelMinimo();
         }
 
+
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_ToolCompra(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_ToolCompra(autoGrupoUsuario);
@@ -76,32 +77,35 @@ namespace ServiceCompra.MyService
         }
 
 
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Grupo(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Grupo(autoGrupoUsuario);
+        }
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_CrearGrupo(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_CrearGrupo(autoGrupoUsuario);
         }
-
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_ModificarGrupo(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_ModificarGrupo(autoGrupoUsuario);
         }
 
-
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Proveedor(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_Proveedor(autoGrupoUsuario);
         }
-
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Proveedor_Agregar(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_Proveedor_Agregar(autoGrupoUsuario);
         }
-
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Proveedor_Editar(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_Proveedor_Editar(autoGrupoUsuario);
         }
-
+        public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Proveedor_CambiarEstatus(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Proveedor_CambiarEstatus(autoGrupoUsuario);
+        }
         public DtoLib.ResultadoEntidad<DtoLibCompra.Permiso.Ficha> Permiso_Proveedor_Reportes(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_Proveedor_Reportes(autoGrupoUsuario);
