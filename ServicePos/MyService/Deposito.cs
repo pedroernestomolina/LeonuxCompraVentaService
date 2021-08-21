@@ -22,6 +22,11 @@ namespace ServicePos.MyService
             return ServiceProv.Deposito_GetFichaById(id);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPos.Deposito.Entidad.Ficha> Deposito_GetFicha_ByCodigo(string codigo)
+        {
+            return ServiceProv.Deposito_GetFicha_ByCodigo(codigo);
+        }
+
     }
 
 }

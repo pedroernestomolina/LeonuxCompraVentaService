@@ -22,6 +22,11 @@ namespace ServicePos.MyService
             return ServiceProv.Sucursal_GetFichaById(id);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPos.Sucursal.Entidad.Ficha> Sucursal_GetFicha_ByCodigo(string codigo)
+        {
+            return ServiceProv.Sucursal_GetFicha_ByCodigo(codigo);
+        }
+
     }
 
 }

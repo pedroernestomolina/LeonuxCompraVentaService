@@ -24,11 +24,30 @@ namespace ServiceSistema.MyService
 
         public DtoLib.ResultadoAuto Cobrador_AgregarFicha(DtoLibSistema.Cobrador.Agregar.Ficha ficha)
         {
+            var r01 = ServiceProv.Cobrador_Validar_Agregar(ficha);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                return new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+            }
             return ServiceProv.Cobrador_AgregarFicha(ficha);
         }
 
         public DtoLib.Resultado Cobrador_EditarFicha(DtoLibSistema.Cobrador.Editar.Ficha ficha)
         {
+            var r01 = ServiceProv.Cobrador_Validar_Editar(ficha);
+            if (r01.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                return new DtoLib.Resultado()
+                {
+                    Mensaje = r01.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+            }
             return ServiceProv.Cobrador_EditarFicha(ficha);
         }
 
