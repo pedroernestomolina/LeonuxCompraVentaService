@@ -47,6 +47,11 @@ namespace ServicePos.MyService
             return ServiceProv.Configuracion_Pos_CambioDepositoSucursal(ficha);
         }
 
+        public DtoLib.ResultadoEntidad<string> Configuracion_Habilitar_Precio5_VentaMayor()
+        {
+            return ServiceProv.Configuracion_Habilitar_Precio5_VentaMayor();
+        }
+
     }
 
 }
