@@ -22,6 +22,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.ReconversionMonetaria_GetData();
         }
 
+        public DtoLib.ResultadoEntidad<int> ReconversionMonetaria_GetCount()
+        {
+            return ServiceProv.ReconversionMonetaria_GetCount();
+        }
+
     }
 
 }

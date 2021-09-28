@@ -12,12 +12,12 @@ namespace ServiceSistema.MyService
     public partial class Service : IService
     {
 
-        public DtoLib.ResultadoEntidad<decimal> Configuracion_TasaCambioActual()
+        public DtoLib.ResultadoEntidad<string> Configuracion_TasaCambioActual()
         {
             return ServiceProv.Configuracion_TasaCambioActual();
         }
 
-        public DtoLib.ResultadoEntidad<decimal> Configuracion_TasaRecepcionPos()
+        public DtoLib.ResultadoEntidad<string> Configuracion_TasaRecepcionPos()
         {
             return ServiceProv.Configuracion_TasaRecepcionPos();
         }

@@ -17,7 +17,7 @@ namespace ServiceCompra.MyService
             return ServiceProv.Configuracion_PreferenciaBusquedaProveedor();
         }
 
-        public DtoLib.ResultadoEntidad<decimal> Configuracion_TasaCambioActual()
+        public DtoLib.ResultadoEntidad<string> Configuracion_TasaCambioActual()
         {
             return ServiceProv.Configuracion_TasaCambioActual();
         }

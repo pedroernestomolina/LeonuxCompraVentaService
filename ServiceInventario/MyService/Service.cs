@@ -15,9 +15,9 @@ namespace ServiceInventario.MyService
         public static ILibInventario.IProvider ServiceProv;
 
 
-        public Service(string instancia, string bd)
+        public Service(string instancia, string bd, string usu="root")
         {
-            ServiceProv = new ProvLibInventario.Provider(instancia, bd);
+            ServiceProv = new ProvLibInventario.Provider(instancia, bd, usu);
         }
 
 
