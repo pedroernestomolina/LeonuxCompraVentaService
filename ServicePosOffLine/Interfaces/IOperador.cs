@@ -16,6 +16,8 @@ namespace ServicePosOffLine.Interfaces
         DtoLib.ResultadoEntidad<DtoLibPosOffLine.Operador.Cargar.Ficha> Operador_Cargar(int idOperador);
         DtoLib.ResultadoEntidad<int> Operador_Activa();
         DtoLib.ResultadoEntidad<DtoLibPosOffLine.Operador.Movimiento.Ficha> Operador_Movimientos(int idOperador);
+        //
+        DtoLib.Resultado Operador_Jornada_Cerrar(DtoLibPosOffLine.Operador.Cerrar.Ficha ficha);
 
     }
 

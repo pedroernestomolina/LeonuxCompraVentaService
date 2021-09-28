@@ -50,6 +50,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Operador_Movimientos(idOperador);
         }
 
+        public DtoLib.Resultado Operador_Jornada_Cerrar(DtoLibPosOffLine.Operador.Cerrar.Ficha ficha)
+        {
+            return ServiceProv.Operador_Jornada_Cerrar(ficha);
+        }
+
     }
 
 }

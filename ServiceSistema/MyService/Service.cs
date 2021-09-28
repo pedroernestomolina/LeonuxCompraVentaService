@@ -15,9 +15,9 @@ namespace ServiceSistema.MyService
         public static ILibSistema.IProvider ServiceProv;
 
 
-        public Service(string instancia, string bd)
+        public Service(string instancia, string bd, string usuario="root")
         {
-            ServiceProv = new ProvLibSistema.Provider(instancia, bd);
+            ServiceProv = new ProvLibSistema.Provider(instancia, bd, usuario);
         }
 
 
