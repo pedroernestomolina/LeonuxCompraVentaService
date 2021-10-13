@@ -17,14 +17,14 @@ namespace ServicePos.MyService
             return ServiceProv.Pendiente_DejarCta(ficha);
         }
 
-        public DtoLib.ResultadoEntidad<int> Pendiente_CtasPendientes(int idOperador)
+        public DtoLib.ResultadoEntidad<int> Pendiente_CtasPendientes(DtoLibPos.Pendiente.Cnt.Filtro filtro)
         {
-            return ServiceProv.Pendiente_CtasPendientes(idOperador);
+            return ServiceProv.Pendiente_CtasPendientes(filtro);
         }
 
-        public DtoLib.Resultado Pendiente_AbrirCta(int idCta)
+        public DtoLib.Resultado Pendiente_AbrirCta(int idCta, int idOperador)
         {
-            return ServiceProv.Pendiente_AbrirCta(idCta);
+            return ServiceProv.Pendiente_AbrirCta(idCta, idOperador);
         }
 
         public DtoLib.ResultadoLista<DtoLibPos.Pendiente.Lista.Ficha> Pendiente_Lista(DtoLibPos.Pendiente.Lista.Filtro filtro)
