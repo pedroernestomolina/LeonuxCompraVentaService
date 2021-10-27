@@ -31,6 +31,7 @@ namespace ServicePosOffLine.Interfaces
         DtoLib.ResultadoEntidad<DtoLibPosOffLine.Configuracion.Actual.Ficha> Configuracion_ActualCargar();
 
         DtoLib.ResultadoEntidad<bool> Configuracion_Habilitar_Precio5_VentaMayor();
+        DtoLib.ResultadoEntidad<bool> Configuracion_Habilitar_VentaMayor();
 
     }
 
