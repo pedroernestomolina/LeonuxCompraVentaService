@@ -245,6 +245,13 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_Movimiento_Traslado_Devolucion_Insertar(ficha);
         }
 
+        //
+
+        public DtoLib.ResultadoLista<DtoLibInventario.Movimiento.Traslado.Capturar.ProductoPorDebajoNivelMinimo.Ficha> Capturar_ProductosPorDebajoNivelMinimo(DtoLibInventario.Movimiento.Traslado.Capturar.ProductoPorDebajoNivelMinimo.Filtro filtro)
+        {
+            return ServiceProv.Capturar_ProductosPorDebajoNivelMinimo(filtro);
+        }
+
     }
 
 }
