@@ -63,6 +63,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Reportes_Valorizacion(filtro);
         }
 
+        public DtoLib.ResultadoLista<DtoLibInventario.Reportes.KardexResumen.Ficha> Reportes_KardexResumen(DtoLibInventario.Reportes.Kardex.Filtro filtro)
+        {
+            return ServiceProv.Reportes_KardexResumen(filtro);
+        }
+
     }
 
 }
