@@ -114,6 +114,10 @@ namespace ServiceSistema.MyService
         {
             return ServiceProv.Permiso_ControlUsuarioGrupo_Editar(autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuarioGrupo_Eliminar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ControlUsuarioGrupo_Eliminar(autoGrupoUsuario);
+        }
 
         public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuario(string autoGrupoUsuario)
         {
@@ -130,6 +134,10 @@ namespace ServiceSistema.MyService
         public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuario_ActivarInactivar(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_ControlUsuario_ActivarInactivar(autoGrupoUsuario);
+        }
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuario_Eliminar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ControlUsuario_Eliminar(autoGrupoUsuario);
         }
 
         public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlVendedor(string autoGrupoUsuario)

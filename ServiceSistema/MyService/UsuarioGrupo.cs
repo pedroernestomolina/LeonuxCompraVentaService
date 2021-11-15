@@ -32,6 +32,29 @@ namespace ServiceSistema.MyService
             return ServiceProv.GrupoUsuario_Editar(ficha);
         }
 
+        public DtoLib.Resultado GrupoUsuario_ELiminar(string auto)
+        {
+            var rt = new DtoLib.Resultado();
+
+            if (auto == "0000000001") 
+            {
+                rt.Mensaje = "GRUPO ADMINISTRADOR NO PUEDE SER ELIMINADO";
+                rt.Result = DtoLib.Enumerados.EnumResult.isError;
+                return rt;
+            }
+            rt = ServiceProv.GrupoUsuario_Validar_EliminarGrupo(auto);
+            if (rt.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                return rt;
+            }
+            return ServiceProv.GrupoUsuario_ELiminar(auto);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibSistema.GrupoUsuario.Usuario> GrupoUsuario_GetUsuarios(string auto)
+        {
+            return ServiceProv.GrupoUsuario_GetUsuarios(auto);
+        }
+
     }
 
 }

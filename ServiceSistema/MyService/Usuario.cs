@@ -17,9 +17,9 @@ namespace ServiceSistema.MyService
             return ServiceProv.Usuario_Principal();
         }
 
-        public DtoLib.ResultadoLista<DtoLibSistema.Usuario.Resumen> Usuario_GetLista()
+        public DtoLib.ResultadoLista<DtoLibSistema.Usuario.Resumen> Usuario_GetLista(DtoLibSistema.Usuario.Lista.Filtro filtro)
         {
-            return ServiceProv.Usuario_GetLista ();
+            return ServiceProv.Usuario_GetLista(filtro);
         }
 
         public DtoLib.ResultadoEntidad<DtoLibSistema.Usuario.Ficha> Usuario_GetFicha(string autoUsu)
@@ -55,6 +55,18 @@ namespace ServiceSistema.MyService
         public DtoLib.Resultado Usuario_ActualizarSesion(DtoLibSistema.Usuario.ActualizarSesion.Ficha ficha)
         {
             return ServiceProv.Usuario_ActualizarSesion(ficha);
+        }
+
+        public DtoLib.Resultado Usuario_Eliminar(string id)
+        {
+            var rt = new DtoLib.Resultado();
+            if (id == "0000000001")
+            {
+                rt.Mensaje = "USUARIO ADMINSTRADOR NO PUEDE SER ELIMINADO";
+                rt.Result = DtoLib.Enumerados.EnumResult.isError;
+                return rt;
+            }
+            return ServiceProv.Usuario_Eliminar (id);
         }
 
     }
