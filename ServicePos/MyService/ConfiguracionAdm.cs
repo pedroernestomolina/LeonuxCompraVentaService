@@ -17,6 +17,11 @@ namespace ServicePos.MyService
             return ServiceProv.Configuracion_BusquedaCliente();
         }
 
+        DtoLib.ResultadoEntidad<DtoLibPos.Configuracion.BusquedaProducto.Enumerados.EnumPreferenciaBusqueda> IConfiguracionAdm.Configuracion_PreferenciaBusquedaProducto()
+        {
+            return ServiceProv.Configuracion_PreferenciaBusquedaProducto();
+        }
+
     }
 
 }
