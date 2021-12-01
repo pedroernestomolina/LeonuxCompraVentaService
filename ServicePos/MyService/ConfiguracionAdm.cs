@@ -12,14 +12,19 @@ namespace ServicePos.MyService
     public partial class Service : IService
     {
 
-        public DtoLib.ResultadoEntidad<DtoLibPos.Configuracion.BusquedaCliente.Entidad.Ficha> Configuracion_BusquedaCliente()
+        public DtoLib.ResultadoEntidad<DtoLibPos.Configuracion.BusquedaCliente.Entidad.Ficha> ConfiguracionAdm_BusquedaCliente()
         {
-            return ServiceProv.Configuracion_BusquedaCliente();
+            return ServiceProv.ConfiguracionAdm_BusquedaCliente();
         }
 
-        DtoLib.ResultadoEntidad<DtoLibPos.Configuracion.BusquedaProducto.Enumerados.EnumPreferenciaBusqueda> IConfiguracionAdm.Configuracion_PreferenciaBusquedaProducto()
+        public DtoLib.ResultadoEntidad<DtoLibPos.Configuracion.BusquedaProducto.Enumerados.EnumPreferenciaBusqueda> ConfiguracionAdm_PreferenciaBusquedaProducto()
         {
-            return ServiceProv.Configuracion_PreferenciaBusquedaProducto();
+            return ServiceProv.ConfiguracionAdm_PreferenciaBusquedaProducto();
+        }
+
+        public DtoLib.ResultadoEntidad<string> ConfiguracionAdm_RupturaPorExistencia()
+        {
+            return ServiceProv.ConfiguracionAdm_RupturaPorExistencia();
         }
 
     }
