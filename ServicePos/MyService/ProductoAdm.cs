@@ -22,6 +22,11 @@ namespace ServicePos.MyService
             return ServiceProv.ProductoAdm_GetFichaById(id);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibPos.ProductoAdm.Existencia.Ficha> ProductoAdm_Existencia_GetFichaByDeposito(string idPrd, string idDeposito)
+        {
+            return ServiceProv.ProductoAdm_Existencia_GetFichaByDeposito(idPrd, idDeposito);
+        }
+
     }
 
 }
