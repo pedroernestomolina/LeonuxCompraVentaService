@@ -27,6 +27,11 @@ namespace ServicePos.MyService
             return ServiceProv.ProductoAdm_Existencia_GetFichaByDeposito(idPrd, idDeposito);
         }
 
+        public DtoLib.ResultadoLista<DtoLibPos.ProductoAdm.ListaResumen.Ficha> ProductoAdm_GetListaResumen(DtoLibPos.ProductoAdm.ListaResumen.Filtro filtro)
+        {
+            return ServiceProv.ProductoAdm_GetListaResumen(filtro);
+        }
+
     }
 
 }

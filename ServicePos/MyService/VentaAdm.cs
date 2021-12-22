@@ -24,6 +24,10 @@ namespace ServicePos.MyService
         {
             return ServiceProv.VentaAdm_Temporal_Encabezado_Editar(ficha);
         }
+        public DtoLib.Resultado VentaAdm_Temporal_Encabezado_Notas(DtoLibPos.VentaAdm.Temporal.Encabezado.Notas.Ficha ficha)
+        {
+            return ServiceProv.VentaAdm_Temporal_Encabezado_Notas(ficha);
+        }
 
         //
 
@@ -58,6 +62,10 @@ namespace ServicePos.MyService
         {
             return ServiceProv.VentaAdm_Temporal_Recuperar(ficha);
         }
+        public DtoLib.ResultadoEntidad<int> VentaAdm_Temporal_Recuperar_GetCantidaDoc(DtoLibPos.VentaAdm.Temporal.Recuperar.Ficha ficha)
+        {
+            return ServiceProv.VentaAdm_Temporal_Recuperar_GetCantidaDoc(ficha);
+        }
 
         //
 
@@ -76,6 +84,13 @@ namespace ServicePos.MyService
         public DtoLib.ResultadoEntidad<DtoLibPos.VentaAdm.Temporal.Pendiente.Entidad.Ficha> VentaAdm_Temporal_Pendiente_Abrir(int IdTemp)
         {
             return ServiceProv.VentaAdm_Temporal_Pendiente_Abrir(IdTemp);
+        }
+
+        //
+
+        public DtoLib.Resultado VentaAdm_Temporal_Remision_Registrar(DtoLibPos.VentaAdm.Temporal.Remision.Registrar.Ficha ficha)
+        {
+            return ServiceProv.VentaAdm_Temporal_Remision_Registrar(ficha);
         }
 
     }

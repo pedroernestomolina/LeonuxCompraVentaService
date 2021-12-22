@@ -11,7 +11,7 @@ namespace ServiceCompra.Interfaces
     public interface IDeposito
     {
 
-        DtoLib.ResultadoLista<DtoLibCompra.Deposito.Lista.Resumen> Deposito_GetLista();
+        DtoLib.ResultadoLista<DtoLibCompra.Deposito.Lista.Resumen> Deposito_GetLista(DtoLibCompra.Deposito.Lista.Filtro filtro);
         DtoLib.ResultadoEntidad<DtoLibCompra.Deposito.Data.Ficha> Deposito_GetFicha(string autoDeposito);
 
     }
