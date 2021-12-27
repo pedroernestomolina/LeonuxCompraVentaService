@@ -37,14 +37,24 @@ namespace ServicePos.MyService
             return ServiceProv.ReportesAdm_VentaPorProducto(filtro);
         }
 
-        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.GeneralDocumentoDetalle.Ficha> Reporte_GenrealDocumentoDetalle(DtoLibPos.Reportes.VentaAdministrativa.GeneralDocumentoDetalle.Filtro filtro)
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.GeneralDocumentoDetalle.Ficha> ReportesAdm_GeneralDocumentoDetalle(DtoLibPos.Reportes.VentaAdministrativa.GeneralDocumentoDetalle.Filtro filtro)
         {
-            return ServiceProv.Reporte_GenrealDocumentoDetalle(filtro);
+            return ServiceProv.ReportesAdm_GeneralDocumentoDetalle(filtro);
         }
 
-        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Ficha> Reporte_Consolidado(DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Filtro filtro)
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Ficha> ReportesAdm_Consolidado(DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Filtro filtro)
         {
-            return ServiceProv.Reporte_Consolidado(filtro);
+            return ServiceProv.ReportesAdm_Consolidado (filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Venta.Ficha> ReportesAdm_Utilidad_Venta(DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Filtro filtro)
+        {
+            return ServiceProv.ReportesAdm_UtilidadVenta(filtro);
+        }
+
+        public DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Producto.Ficha> ReportesAdm_Utilidad_Producto(DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Filtro filtro)
+        {
+            return ServiceProv.ReportesAdm_UtilidadProducto(filtro);
         }
 
     }
