@@ -21,7 +21,12 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Deposito_GetFicha(autoDep);
         }
-    
+
+        public DtoLib.ResultadoLista<DtoLibInventario.Deposito.Resumen> Deposito_GetListaBySucursal(string codSuc)
+        {
+            return ServiceProv.Deposito_GetListaBySucursal(codSuc);
+        }
+
     }
 
 }
