@@ -20,7 +20,6 @@ namespace ServicePos.MyService
         {
             return ServiceProv.Permiso_Pos(idGrupoUsu, codFuncion);
         }
-
         //
 
         public DtoLib.ResultadoEntidad<string> Permiso_PedirClaveAcceso_NivelMaximo()
@@ -35,7 +34,6 @@ namespace ServicePos.MyService
         {
             return ServiceProv.Permiso_PedirClaveAcceso_NivelMinimo();
         }
-
         //
 
         public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_Reportes(string idGrupoUsu)
@@ -46,7 +44,22 @@ namespace ServicePos.MyService
         {
             return ServiceProv.Permiso_VentaAdm_AnularDocumento(idGrupoUsu);
         }
-
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_AnularItem(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_VentaAdm_AnularItem(idGrupoUsu);
+        }
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_DarDsctoItem(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_VentaAdm_DarDsctoItem(idGrupoUsu);
+        }
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_PrecioLibre(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_VentaAdm_PrecioLibre(idGrupoUsu);
+        }
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_VisualizarCosto(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_VentaAdm_VisualizarCosto(idGrupoUsu);
+        }
         //
 
         public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo(string idGrupoUsu)
@@ -61,7 +74,6 @@ namespace ServicePos.MyService
         {
             return ServiceProv.Permiso_ClienteGrupo_Editar(idGrupoUsu);
         }
-
         //
 
         public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteZona(string idGrupoUsu)
@@ -76,7 +88,6 @@ namespace ServicePos.MyService
         {
             return ServiceProv.Permiso_ClienteZona_Editar(idGrupoUsu);
         }
-
         //
 
         public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_Cliente(string idGrupoUsu)

@@ -37,6 +37,11 @@ namespace ServicePosOffLine.MyService
             return ServiceProv.Cliente_ExportarData(filtro);
         }
 
+        public DtoLib.Resultado Cliente_Editar(DtoLibPosOffLine.Cliente.Editar.Ficha ficha)
+        {
+            return ServiceProv.Cliente_Editar(ficha);
+        }
+
     }
 
 }
