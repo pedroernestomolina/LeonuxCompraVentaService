@@ -60,6 +60,7 @@
     <Compile Include="Interfaces\IConfiguracionAdm.cs" />
     <Compile Include="Interfaces\IDeposito.cs" />
     <Compile Include="Interfaces\IDocumento.cs" />
+    <Compile Include="Interfaces\IDocumentoAdm.cs" />
     <Compile Include="Interfaces\IFiscal.cs" />
     <Compile Include="Interfaces\IJornada.cs" />
     <Compile Include="Interfaces\IMedioPago.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="MyService\ConfiguracionAdm.cs" />
     <Compile Include="MyService\Deposito.cs" />
     <Compile Include="MyService\Documento.cs" />
+    <Compile Include="MyService\DocumentoAdm.cs" />
     <Compile Include="MyService\Fiscal.cs" />
     <Compile Include="MyService\Jornada.cs" />
     <Compile Include="MyService\MedioPago.cs" />
