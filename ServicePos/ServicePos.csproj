@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IAuditoria.cs" />
     <Compile Include="Interfaces\ICliente.cs" />
     <Compile Include="Interfaces\IClienteGrupo.cs" />
     <Compile Include="Interfaces\IClienteZona.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Interfaces\IVendedor.cs" />
     <Compile Include="Interfaces\IVenta.cs" />
     <Compile Include="Interfaces\IVentaAdm.cs" />
+    <Compile Include="MyService\Auditoria.cs" />
     <Compile Include="MyService\Cliente.cs" />
     <Compile Include="MyService\ClienteGrupo.cs" />
     <Compile Include="MyService\ClienteZona.cs" />
