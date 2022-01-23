@@ -22,6 +22,11 @@ namespace ServicePos.MyService
             return ServiceProv.DocumentoAdm_Anular_Presupuesto(ficha);
         }
 
+        public DtoLib.ResultadoAuto DocumentoAdm_Agregar_Pedido(DtoLibPos.DocumentoAdm.Agregar.Pedido.Ficha ficha)
+        {
+            return ServiceProv.DocumentoAdm_Agregar_Pedido(ficha);
+        }
+
     }
 
 }

@@ -46,6 +46,10 @@ namespace ServicePos.MyService
         {
             return ServiceProv.VentaAdm_Temporal_Item_Actualizar(ficha);
         }
+        public DtoLib.ResultadoLista<DtoLibPos.VentaAdm.Temporal.Item.Entidad.Ficha> VentaAdm_Temporal_Item_GetLista(int idTemporal)
+        {
+            return ServiceProv.VentaAdm_Temporal_Item_GetLista(idTemporal);
+        }
         //
 
         public DtoLib.Resultado VentaAdm_Temporal_Anular(DtoLibPos.VentaAdm.Temporal.Anular.Ficha ficha)

@@ -60,6 +60,10 @@ namespace ServicePos.MyService
         {
             return ServiceProv.Permiso_VentaAdm_VisualizarCosto(idGrupoUsu);
         }
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_DsctoGlobal(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_VentaAdm_DsctoGlobal(idGrupoUsu);
+        }
         //
 
         public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_ClienteGrupo(string idGrupoUsu)
