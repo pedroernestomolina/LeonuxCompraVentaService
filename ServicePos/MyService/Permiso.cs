@@ -36,6 +36,12 @@ namespace ServicePos.MyService
         }
         //
 
+        public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_Configuracion(string idGrupoUsu)
+        {
+            return ServiceProv.Permiso_VentaAdm_Configuracion(idGrupoUsu);
+        }
+        //
+
         public DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_Reportes(string idGrupoUsu)
         {
             return ServiceProv.Permiso_VentaAdm_Reportes(idGrupoUsu);

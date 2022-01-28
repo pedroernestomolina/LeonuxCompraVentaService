@@ -20,6 +20,7 @@ namespace ServicePos.Interfaces
         DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Ficha> ReportesAdm_Consolidado(DtoLibPos.Reportes.VentaAdministrativa.Consolidado.Filtro filtro);
         DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Venta.Ficha> ReportesAdm_Utilidad_Venta(DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Filtro filtro);
         DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Producto.Ficha> ReportesAdm_Utilidad_Producto(DtoLibPos.Reportes.VentaAdministrativa.Utilidad.Filtro filtro);
+        DtoLib.ResultadoLista<DtoLibPos.Reportes.VentaAdministrativa.LibroVenta.Ficha> ReportesAdm_LibroVenta(DtoLibPos.Reportes.VentaAdministrativa.LibroVenta.Filtro filtro);
 
     }
 

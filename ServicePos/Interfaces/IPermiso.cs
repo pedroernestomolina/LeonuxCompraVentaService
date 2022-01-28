@@ -20,6 +20,9 @@ namespace ServicePos.Interfaces
         DtoLib.ResultadoEntidad<string> Permiso_PedirClaveAcceso_NivelMinimo();
         //
 
+        DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_Configuracion(string idGrupoUsu);
+        //
+
         DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_Reportes(string idGrupoUsu);
         DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_AnularDocumento(string idGrupoUsu);
         DtoLib.ResultadoEntidad<DtoLibPos.Permiso.Entidad.Ficha> Permiso_VentaAdm_AnularItem(string idGrupoUsu);

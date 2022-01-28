@@ -78,6 +78,11 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_HabilitarPrecio_5_ParaVentaMayorPos();
         }
 
+        public DtoLib.Resultado Configuracion_SetDepositosPreDeterminado(DtoLibInventario.Configuracion.DepositoPredeterminado.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_SetDepositosPreDeterminado(ficha);
+        }
+
     }
 
 }
