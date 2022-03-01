@@ -187,6 +187,11 @@ namespace ServiceSistema.MyService
             return ServiceProv.Permiso_ControlSerieFiscal_ActivarInactivar(autoGrupoUsuario);
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_Configuracion_Sistema(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Configuracion_Sistema(autoGrupoUsuario);
+        }
+
     }
 
 }

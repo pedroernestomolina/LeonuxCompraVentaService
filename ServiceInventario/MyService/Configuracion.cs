@@ -40,6 +40,10 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Configuracion_VisualizarProductosInactivos();
         }
+        public DtoLib.ResultadoEntidad<string> Configuracion_CantDocVisualizar()
+        {
+            return ServiceProv.Configuracion_CantDocVisualizar();
+        }
 
         public DtoLib.Resultado Configuracion_SetCostoEdadProducto(DtoLibInventario.Configuracion.CostoEdad.Editar.Ficha ficha)
         {
