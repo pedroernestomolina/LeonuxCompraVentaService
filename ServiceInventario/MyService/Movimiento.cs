@@ -163,6 +163,76 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Producto_Movimiento_Cargo_Insertar(ficha);
         }
+        public DtoLib.ResultadoAuto Producto_Movimiento_AjusteInvCero_Insertar(DtoLibInventario.Movimiento.AjusteInvCero.Insertar.Ficha ficha)
+        {
+            var rt1 = ServiceProv.Configuracion_CostoEdadProducto();
+            if (rt1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rtx = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rt1.Mensaje,
+                    Result = rt1.Result,
+                };
+                return rtx;
+            }
+            var costoEdad = rt1.Entidad;
+
+            var lista = new List<DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha>();
+            foreach (var rg in ficha.movDeposito.Where(w => w.cantidadUnd < 0).ToList())
+            {
+                lista.Add(new DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha()
+                {
+                    autoProducto = rg.autoProducto,
+                    autoDeposito = rg.autoDeposito,
+                    cantidadUnd = Math.Abs(rg.cantidadUnd),
+                });
+            }
+            var rt = ServiceProv.Producto_Movimiento_Verificar_ExistenciaDisponible(lista);
+            if (rt.Result == DtoLib.Enumerados.EnumResult.isError || rt.Entidad == false)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Auto = "",
+                    Mensaje = rt.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
+            if (costoEdad > 0)
+            {
+                var listaCostoEdad = new List<DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle>();
+                foreach (var rg in ficha.movDeposito.Where(w => w.cantidadUnd < 0).ToList())
+                {
+                    listaCostoEdad.Add(new DtoLibInventario.Movimiento.Verificar.CostoEdad.FichaDetalle()
+                    {
+                        autoProducto = rg.autoProducto,
+                    });
+                }
+                var fichaCostoEdad = new DtoLibInventario.Movimiento.Verificar.CostoEdad.Ficha()
+                {
+                    detalles = listaCostoEdad,
+                    dias = costoEdad,
+                };
+
+                if (listaCostoEdad.Count > 0)
+                {
+                    var rt2 = ServiceProv.Producto_Movimiento_Verificar_CostoEdad(fichaCostoEdad);
+                    if (rt2.Result == DtoLib.Enumerados.EnumResult.isError || rt2.Entidad == false)
+                    {
+                        var rte = new DtoLib.ResultadoAuto()
+                        {
+                            Auto = "",
+                            Mensaje = rt2.Mensaje,
+                            Result = DtoLib.Enumerados.EnumResult.isError,
+                        };
+                        return rte;
+                    }
+                }
+            }
+
+            return ServiceProv.Producto_Movimiento_AjusteInvCero_Insertar(ficha);
+        }
 
 
         //GET
@@ -173,6 +243,10 @@ namespace ServiceInventario.MyService
         public DtoLib.ResultadoLista<DtoLibInventario.Movimiento.Lista.Resumen> Producto_Movimiento_GetLista(DtoLibInventario.Movimiento.Lista.Filtro filtro)
         {
             return ServiceProv.Producto_Movimiento_GetLista(filtro);
+        }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Movimiento.AjusteInvCero.Capture.Ficha> Producto_Movimiento_AjusteInventarioCero_Capture(DtoLibInventario.Movimiento.AjusteInvCero.Capture.Filtro filtro)
+        {
+            return ServiceProv.Producto_Movimiento_AjusteInventarioCero_Capture(filtro);
         }
 
 

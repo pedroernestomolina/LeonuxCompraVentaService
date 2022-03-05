@@ -101,6 +101,10 @@ namespace ServiceSistema.MyService
         {
             return ServiceProv.Permiso_ControlDeposito_Editar(autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlDeposito_ActivarInactivar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ControlDeposito_ActivarInactivar(autoGrupoUsuario);
+        }
 
         public DtoLib.ResultadoEntidad<DtoLibSistema.Permiso.Ficha> Permiso_ControlUsuarioGrupo(string autoGrupoUsuario)
         {

@@ -138,6 +138,10 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_MovimientoTrasladoPorDevolucionInventario(autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_MovimientoAjusteInventarioCero(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_MovimientoAjusteInventarioCero(autoGrupoUsuario);
+        }
 
 
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_AdministradorMovimientoInventario(string autoGrupoUsuario)
@@ -209,6 +213,7 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_EliminarConcepto(autoGrupoUsuario);
         }
+
 
     }
 
