@@ -46,6 +46,10 @@ namespace ServiceInventario.MyService
         }
 
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Departamento(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Departamento(autoGrupoUsuario);
+        }
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_CrearDepartamento(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_CrearDepartamento (autoGrupoUsuario);
@@ -60,6 +64,10 @@ namespace ServiceInventario.MyService
         }
 
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Grupo(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Grupo(autoGrupoUsuario);
+        }
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_CrearGrupo(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_CrearGrupo (autoGrupoUsuario);
@@ -68,8 +76,15 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_ModificarGrupo (autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarGrupo(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_EliminarGrupo(autoGrupoUsuario);
+        }
 
-
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Marca(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_Marca(autoGrupoUsuario);
+        }
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_CrearMarca(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_CrearMarca (autoGrupoUsuario);
@@ -78,8 +93,15 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_ModificarMarca (autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarMarca(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_EliminarMarca(autoGrupoUsuario);
+        }
 
-
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_UnidadEmpaque(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_UnidadEmpaque(autoGrupoUsuario);
+        }
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_CrearUnidadEmpaque(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_CrearUnidadEmpaque (autoGrupoUsuario);
@@ -88,15 +110,28 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_ModificarUnidadEmpaque (autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarUnidadEmpaque(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_EliminarUnidadEmpaque(autoGrupoUsuario);
+        }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_ConceptoInventario(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_ConceptoInventario(autoGrupoUsuario);
+        }
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_CrearConceptoInventario(string autoGrupoUsuario)
         {
-            return ServiceProv.Permiso_CrearConceptoInventario (autoGrupoUsuario);
+            return ServiceProv.Permiso_CrearConceptoInventario(autoGrupoUsuario);
         }
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_ModificarConceptoInventario(string autoGrupoUsuario)
         {
             return ServiceProv.Permiso_ModificarConceptoInventario (autoGrupoUsuario);
         }
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarConceptoInventario(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_EliminarConcepto(autoGrupoUsuario);
+        }
+ 
 
         public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_ToolInventario(string autoGrupoUsuario)
         {
@@ -191,30 +226,7 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_Configuracion_Sistema(autoGrupoUsuario);
         }
-
-
-
-        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarGrupo(string autoGrupoUsuario)
-        {
-            return ServiceProv.Permiso_EliminarGrupo(autoGrupoUsuario);
-        }
-
-        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarMarca(string autoGrupoUsuario)
-        {
-            return ServiceProv.Permiso_EliminarMarca(autoGrupoUsuario);
-        }
-
-        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarUnidadEmpaque(string autoGrupoUsuario)
-        {
-            return ServiceProv.Permiso_EliminarUnidadEmpaque(autoGrupoUsuario);
-        }
-
-        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_EliminarConceptoInventario(string autoGrupoUsuario)
-        {
-            return ServiceProv.Permiso_EliminarConcepto(autoGrupoUsuario);
-        }
-
-
+        
     }
 
 }
