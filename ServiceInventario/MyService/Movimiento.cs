@@ -323,6 +323,14 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_Movimiento_Traslado_Consultar_ProductosPorDebajoNivelMinimo(filtro);
         }
 
+
+        //CAPTURAR DATA PARA MOVIMIENTO TIPO DESCARGO
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Movimiento.DesCargo.CapturaMov.Ficha> 
+            Producto_Movimiento_Descargo_Capture(DtoLibInventario.Movimiento.DesCargo.CapturaMov.Filtro filtro)
+        {
+            return ServiceProv.Producto_Movimiento_Descargo_Capture(filtro);
+        }
+
     }
 
 }
