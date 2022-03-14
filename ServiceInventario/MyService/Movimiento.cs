@@ -331,6 +331,19 @@ namespace ServiceInventario.MyService
             return ServiceProv.Producto_Movimiento_Descargo_Capture(filtro);
         }
 
+
+        //CAPTURAR DATA PARA MOVIMIENTO TIPO DESCARGO
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Movimiento.Cargo.CapturaMov.Ficha> Producto_Movimiento_Cargo_Capture(DtoLibInventario.Movimiento.Cargo.CapturaMov.Filtro filtro)
+        {
+            return ServiceProv.Producto_Movimiento_Cargo_Capture(filtro);
+        }
+
+        //CAPTURAR DATA PARA MOVIMIENTO TIPO TRASLADO
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Movimiento.Traslado.CapturaMov.Ficha> Producto_Movimiento_Traslado_Capture(DtoLibInventario.Movimiento.Traslado.CapturaMov.Filtro filtro)
+        {
+            return ServiceProv.Producto_Movimiento_Traslado_Capture(filtro);
+        }
+
     }
 
 }
