@@ -30,6 +30,13 @@ namespace ServiceInventario.Interfaces
         DtoLib.ResultadoLista<DtoLibInventario.Configuracion.MetodoCalculoUtilidad.CapturarData.Ficha> Configuracion_MetodoCalculoUtilidad_CapturarData();
         DtoLib.ResultadoEntidad<string> Configuracion_HabilitarPrecio_5_ParaVentaMayorPos();
 
+        //DEPOSITO/CONCEPTO PREDETERMINADO PARA MOV DEVOLUCION INVENTARIO
+        DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.DepositoConceptoDev.Captura.Ficha>
+            Configuracion_DepositoConceptoPreDeterminadoParaDevolucion();
+        DtoLib.Resultado Configuracion_SetDepositoConceptoPreDeterminadoParaDevolucion(
+            DtoLibInventario.Configuracion.DepositoConceptoDev.Editar.Ficha ficha);
+
+
     }
 
 }

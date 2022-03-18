@@ -79,6 +79,15 @@ namespace ServiceInventario.MyService
             return ServiceProv.Configuracion_HabilitarPrecio_5_ParaVentaMayorPos();
         }
 
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Configuracion.DepositoConceptoDev.Captura.Ficha> Configuracion_DepositoConceptoPreDeterminadoParaDevolucion()
+        {
+            return ServiceProv.Configuracion_DepositoConceptoPreDeterminadoParaDevolucion ();
+        }
+        public DtoLib.Resultado Configuracion_SetDepositoConceptoPreDeterminadoParaDevolucion(DtoLibInventario.Configuracion.DepositoConceptoDev.Editar.Ficha ficha)
+        {
+            return ServiceProv.Configuracion_SetDepositoConceptoPreDeterminadoParaDevolucion(ficha);
+        }
+
     }
 
 }
