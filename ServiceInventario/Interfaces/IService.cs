@@ -11,7 +11,7 @@ namespace ServiceInventario.Interfaces
     public interface IService: IDeposito, IConcepto, ISucursal, IMovimiento, IUsuario, 
         IReportes, IReporteDocumentos, ITool, IDepartamento, IGrupo, IMarca,
         IEmpaqueMedida, IProducto, ITasaImpuesto, IConfiguracion, IPrecio, ICosto, IKardex,
-        IProveedor, IVisor, IPermisos, IAnalisis, IAuditoria, ISistema
+        IProveedor, IVisor, IPermisos, IAnalisis, IAuditoria, ISistema, IMovTransito
     {
 
         DtoLib.ResultadoEntidad<DateTime> FechaServidor();

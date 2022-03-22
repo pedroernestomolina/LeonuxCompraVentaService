@@ -16,6 +16,20 @@ namespace ServiceInventario.MyService
         //INSERTAR
         public DtoLib.ResultadoAuto Producto_Movimiento_Ajuste_Insertar(DtoLibInventario.Movimiento.Ajuste.Insertar.Ficha ficha)
         {
+            var rv1 = ServiceProv.Producto_Movimiento_Verificar_DepositoSucursalActivo(
+                ficha.mov.autoDepositoOrigen, 
+                ficha.mov.autoDepositoDestino,
+                ficha.mov.codigoSucursal);
+            if (rv1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rv1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
             var rt1 = ServiceProv.Configuracion_CostoEdadProducto();
             if (rt1.Result == DtoLib.Enumerados.EnumResult.isError)
             {
@@ -86,6 +100,20 @@ namespace ServiceInventario.MyService
         }
         public DtoLib.ResultadoAuto Producto_Movimiento_Traslado_Insertar(DtoLibInventario.Movimiento.Traslado.Insertar.Ficha ficha)
         {
+            var rv1 = ServiceProv.Producto_Movimiento_Verificar_DepositoSucursalActivo(
+                ficha.mov.autoDepositoOrigen,
+                ficha.mov.autoDepositoDestino,
+                ficha.mov.codigoSucursal);
+            if (rv1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rv1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
             var lista = new List<DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha>();
             foreach (var rg in ficha.prdDeposito)
             {
@@ -111,6 +139,20 @@ namespace ServiceInventario.MyService
         }
         public DtoLib.ResultadoAuto Producto_Movimiento_Traslado_Devolucion_Insertar(DtoLibInventario.Movimiento.Traslado.Insertar.Ficha ficha)
         {
+            var rv1 = ServiceProv.Producto_Movimiento_Verificar_DepositoSucursalActivo(
+                ficha.mov.autoDepositoOrigen,
+                ficha.mov.autoDepositoDestino,
+                ficha.mov.codigoSucursal);
+            if (rv1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rv1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
             var lista = new List<DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha>();
             foreach (var rg in ficha.prdDeposito)
             {
@@ -136,6 +178,20 @@ namespace ServiceInventario.MyService
         }
         public DtoLib.ResultadoAuto Producto_Movimiento_DesCargo_Insertar(DtoLibInventario.Movimiento.DesCargo.Insertar.Ficha ficha)
         {
+            var rv1 = ServiceProv.Producto_Movimiento_Verificar_DepositoSucursalActivo(
+                ficha.mov.autoDepositoOrigen,
+                ficha.mov.autoDepositoDestino,
+                ficha.mov.codigoSucursal);
+            if (rv1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rv1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
             var lista = new List<DtoLibInventario.Movimiento.Verificar.ExistenciaDisponible.Ficha>();
             foreach (var rg in ficha.movDeposito)
             {
@@ -161,10 +217,38 @@ namespace ServiceInventario.MyService
         }
         public DtoLib.ResultadoAuto Producto_Movimiento_Cargo_Insertar(DtoLibInventario.Movimiento.Cargo.Insertar.Ficha ficha)
         {
+            var rv1 = ServiceProv.Producto_Movimiento_Verificar_DepositoSucursalActivo(
+                ficha.mov.autoDepositoOrigen,
+                ficha.mov.autoDepositoDestino,
+                ficha.mov.codigoSucursal);
+            if (rv1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rv1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
             return ServiceProv.Producto_Movimiento_Cargo_Insertar(ficha);
         }
         public DtoLib.ResultadoAuto Producto_Movimiento_AjusteInvCero_Insertar(DtoLibInventario.Movimiento.AjusteInvCero.Insertar.Ficha ficha)
         {
+            var rv1 = ServiceProv.Producto_Movimiento_Verificar_DepositoSucursalActivo(
+                ficha.mov.autoDepositoOrigen,
+                ficha.mov.autoDepositoDestino,
+                ficha.mov.codigoSucursal);
+            if (rv1.Result == DtoLib.Enumerados.EnumResult.isError)
+            {
+                var rte = new DtoLib.ResultadoAuto()
+                {
+                    Mensaje = rv1.Mensaje,
+                    Result = DtoLib.Enumerados.EnumResult.isError,
+                };
+                return rte;
+            }
+
             var rt1 = ServiceProv.Configuracion_CostoEdadProducto();
             if (rt1.Result == DtoLib.Enumerados.EnumResult.isError)
             {
