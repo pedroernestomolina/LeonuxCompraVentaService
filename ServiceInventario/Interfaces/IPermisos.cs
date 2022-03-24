@@ -72,6 +72,8 @@ namespace ServiceInventario.Interfaces
 
         DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_Configuracion_Sistema(string autoGrupoUsuario);
 
+        DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_MovimientoTraslado_Procesar(string autoGrupoUsuario);
+
     }
 
 }

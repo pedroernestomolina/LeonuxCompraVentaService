@@ -226,7 +226,13 @@ namespace ServiceInventario.MyService
         {
             return ServiceProv.Permiso_Configuracion_Sistema(autoGrupoUsuario);
         }
-        
+
+
+        public DtoLib.ResultadoEntidad<DtoLibInventario.Permiso.Ficha> Permiso_MovimientoTraslado_Procesar(string autoGrupoUsuario)
+        {
+            return ServiceProv.Permiso_MovimientoTraslado_Procesar(autoGrupoUsuario);
+        }
+
     }
 
 }
